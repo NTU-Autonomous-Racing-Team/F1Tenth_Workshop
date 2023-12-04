@@ -31,7 +31,7 @@
 
 > Part 4: Navigation and Local Planning  
 > - communicate the theory/ working principle of the planner. 
->> Bug0 [Luthov CODE](main), Bug1, Bug2 (optional  [CODE]) 
+>> Bug0 \[Luthov CODE](main\), Bug1, Bug2 (optional  [CODE]) 
 >> - self written into a separate script. (fill in the blanks)
 >> - build package
 >> DWA, TEB [visualise CODE]
