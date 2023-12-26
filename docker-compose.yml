@@ -1,0 +1,26 @@
+services:
+  asme_ros:
+    image: asme_ros
+    container_name: asme_ros
+    build: ./
+    hostname: asme_ros
+    volumes: 
+      - .:/jackal_files
+    environment:
+      - DISPLAY=novnc:0.0
+    networks:
+      - x11
+    stdin_open: true
+    tty: true 
+  novnc:  
+    image: theasp/novnc:latest
+    container_name: novnc
+    environment:
+      - DISPLAY_WIDTH=2160
+      - DISPLAY_HEIGHT=1080
+    ports:
+      - "8080:8080"
+    networks:
+      - x11
+networks:
+  x11:

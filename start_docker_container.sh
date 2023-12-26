@@ -1,12 +1,9 @@
 #!/bin/zsh
 
-container_name=ASME_ROS
-
 if [ "$(docker ps -aq -f status=exited -f name=${container_name})" ]
 then
-	docker start ${container_name}
+	docker start asme_ros &
+	docker start novnc
 fi
 
-docker exec -it ${container_name} /bin/zsh
-
-xhost +local:root
+docker exec -it asme_ros /bin/zsh
