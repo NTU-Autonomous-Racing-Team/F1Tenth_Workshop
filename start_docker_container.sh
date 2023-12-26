@@ -8,3 +8,5 @@ then
 fi
 
 docker exec -it ${container_name} /bin/zsh
+
+xhost +local:root
