@@ -42,7 +42,7 @@ docker compose -p asme_ros up
 ```
 **Run script to start docker container**
 ```sh
-./run_docker_container.sh
+./run_docker_container_mac.sh
 ```
 
 ## Syllabus
