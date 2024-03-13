@@ -40,9 +40,6 @@ docker compose -p asme_ros up
 - changing maps
 - rviz 
 - gazebo
-- This repo is to contain all the code and files for the ROS2 workshop 2024
-- The main idea is that the main will be git cloned into the ros_ws and then ran. 
-- Objective: users get an introdution to ROS and how to use it in real life. i.e. not the nitty gritty details.
   
 ## Syllabus
 > Part 1: Hello ROS
