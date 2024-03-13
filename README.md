@@ -8,8 +8,8 @@
 - changing maps
 - rviz 
 - gazebo 
-## Installation
-# Linux
+# Installation
+## Linux
 ```
 git clone https://github.com/ASME-NTU/ROS2_Workshop.git
 sudo docker create network asme_net
