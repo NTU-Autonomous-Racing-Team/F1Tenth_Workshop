@@ -7,15 +7,28 @@
 - Swapping planners within jackal
 - changing maps
 - rviz 
-- gazebo 
+- gazebo
+  
 # Installation
-## Linux
+
+ 
+## Ubuntu Linux
+
+1. [Install docker](https://docs.docker.com/engine/install/ubuntu/)
+2. [Add Docker into sudo group ](https://docs.docker.com/engine/install/linux-postinstall/)
+
 ```
+# Clone github repository
 git clone https://github.com/ASME-NTU/ROS2_Workshop.git
+
+# Setting up docker container
 sudo docker create network asme_net
 sudo docker build -f asme_ros.Dockerfile -t asme_ros .
+
+# Run script to start docker container
 ./run_docker_container.sh
 ```
+
 ## Syllabus
 > Part 1: Hello ROS
 > -  the elements of ROS, Command line tools, 
