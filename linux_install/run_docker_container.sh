@@ -11,7 +11,7 @@ create_container (){
 	--volume="${XAUTHORITY}:/root/.Xauthority" \
         --privileged \
         --net=asme_net \
-	-v .:/jackal_files/github_dir \
+	-v ..:/jackal_files/github_dir \
         asme_ros
 }
 
