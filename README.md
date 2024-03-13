@@ -29,6 +29,20 @@ sudo docker build -f asme_ros.Dockerfile -t asme_ros .
 ./run_docker_container.sh
 ```
 
+## MacOS
+
+```sh
+# Clone github repository
+git clone https://github.com/ASME-NTU/ROS2_Workshop.git
+
+# Setting up docker container
+cd macos_install
+docker compose -p asme_ros up
+
+# Run script to start docker container
+./run_docker_container.sh
+```
+
 ## Syllabus
 > Part 1: Hello ROS
 > -  the elements of ROS, Command line tools, 
