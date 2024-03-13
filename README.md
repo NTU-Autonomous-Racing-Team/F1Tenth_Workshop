@@ -8,7 +8,14 @@
 - changing maps
 - rviz 
 - gazebo 
-
+## Installation
+# Linux
+```
+git clone https://github.com/ASME-NTU/ROS2_Workshop.git
+sudo docker create network asme_net
+sudo docker build -f asme_ros.Dockerfile -t asme_ros .
+./run_docker_container.sh
+```
 ## Syllabus
 > Part 1: Hello ROS
 > -  the elements of ROS, Command line tools, 
