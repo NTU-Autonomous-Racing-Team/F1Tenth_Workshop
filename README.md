@@ -17,7 +17,7 @@
 1. [Install docker](https://docs.docker.com/engine/install/ubuntu/)
 2. [Add Docker into sudo group ](https://docs.docker.com/engine/install/linux-postinstall/)
 
-```
+```sh
 # Clone github repository
 git clone https://github.com/ASME-NTU/ROS2_Workshop.git
 
