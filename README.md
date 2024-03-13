@@ -11,35 +11,37 @@
   
 # Installation
 
+**Clone this repository**
+```sh
+git clone https://github.com/ASME-NTU/ROS2_Workshop.git
+```
  
 ## Ubuntu Linux
 
 1. [Install docker](https://docs.docker.com/engine/install/ubuntu/)
 2. [Add Docker into sudo group ](https://docs.docker.com/engine/install/linux-postinstall/)
 
+**Setting up docker container**
 ```sh
-# Clone github repository
-git clone https://github.com/ASME-NTU/ROS2_Workshop.git
-
-# Setting up docker container
 sudo docker create network asme_net
 sudo docker build -f asme_ros.Dockerfile -t asme_ros .
-
-# Run script to start docker container
+```
+**Run script to start docker container**
+```sh
 ./run_docker_container.sh
 ```
 
 ## MacOS
 
-```sh
-# Clone github repository
-git clone https://github.com/ASME-NTU/ROS2_Workshop.git
+1. [Install docker](https://docs.docker.com/desktop/install/mac-install/)
 
-# Setting up docker container
+**Setting up docker container**
+```sh
 cd macos_install
 docker compose -p asme_ros up
-
-# Run script to start docker container
+```
+**Run script to start docker container**
+```sh
 ./run_docker_container.sh
 ```
 
