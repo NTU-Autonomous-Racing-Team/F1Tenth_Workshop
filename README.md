@@ -17,6 +17,7 @@ git clone https://github.com/ASME-NTU/ROS2_Workshop.git
 sudo docker create network asme_net
 sudo docker build -f asme_ros.Dockerfile -t asme_ros .
 ```
+
 **Run script to start docker container**
 ```sh
 ./run_docker_container.sh
@@ -31,10 +32,13 @@ sudo docker build -f asme_ros.Dockerfile -t asme_ros .
 cd macos_install
 docker compose -p asme_ros up
 ```
+CTRL+C after everything is done to stop the docker containers
+
 **Run script to start docker container**
 ```sh
 ./run_docker_container_mac.sh
 ```
+Then go to this link [http://localhost:8080/vnc.html](http://localhost:8080/vnc.html) to view the simulation
 ## Brainstorm
 - Swapping planners within jackal
 - changing maps
