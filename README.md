@@ -36,7 +36,7 @@ CTRL+C after everything is done to stop the docker containers
 
 **Run script to start docker container**
 ```sh
-./run_docker_container_mac.sh
+./run_docker_containers_mac.sh
 ```
 Then go to this link [http://localhost:8080/vnc.html](http://localhost:8080/vnc.html) to view the simulation
 ## Brainstorm
