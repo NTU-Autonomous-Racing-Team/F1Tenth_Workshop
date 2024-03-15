@@ -5,13 +5,13 @@ create_container (){
         docker run --rm -it\
         --name ${container_name} \
         -h ${container_name} \
-	--env="DISPLAY"\
-	--env="QT_X11_NO_MITSHM=1" \
-    	--volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
-	--volume="${XAUTHORITY}:/root/.Xauthority" \
+      	--env="DISPLAY"\
+      	--env="QT_X11_NO_MITSHM=1" \
+      	--volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+	      --volume="${XAUTHORITY}:/root/.Xauthority" \
         --privileged \
         --net=asme_net \
-	-v ../:/jackal_files/github_dir \
+	      -v $PWD/../:/jackal_files/github_dir \
         asme_ros
 }
 
