@@ -47,7 +47,7 @@ Then go to this link [http://localhost:8080/vnc.html](http://localhost:8080/vnc.
   
 ## Syllabus
 > Part 1: Hello ROS
-> -  the elements of ROS, Command line tools, 
+> -  The elements of ROS, Command line tools, General command line tools 
 >> 1. What is ROS? "use terminal to show rqtgraph of the whole thing that they will be building"  
 >> 2. Messages, Nodes, Services, Actions, Packages  
 >> Publisher-Subsciber [CODE]
