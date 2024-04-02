@@ -14,7 +14,7 @@ git clone https://github.com/ASME-NTU/ROS2_Workshop.git
 
 **Setting up docker container**
 ```sh
-sudo docker create network asme_net
+sudo docker network create asme_net
 sudo docker build -f asme_ros.Dockerfile -t asme_ros .
 ```
 
