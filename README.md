@@ -37,7 +37,7 @@
 
     - Run this script to start the docker container
       ```sh
-      ./run_docker_container.sh
+      ./run_docker_container_win.sh
       ```
       
 ## MacOS
