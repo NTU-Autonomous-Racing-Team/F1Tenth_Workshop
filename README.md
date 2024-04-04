@@ -98,13 +98,14 @@
       ./run_docker_container.sh
       ```
 
-To view the simulation click on the following link [http://localhost:8080/vnc.html](http://localhost:8080/vnc.html)
-## Brainstorm
-- Swapping planners within jackal
-- changing maps
-- rviz 
-- gazebo
-  
+# Running the simulator
+
+In your respective terminals run (Windows users need to make sure they're in WSL)
+```sh
+ros2 launch jackal_gazebo jackal_world.launch.py
+```
+If everything is working, a window should pop up. For MacOS users click on this link [http://localhost:8080/vnc.html](http://localhost:8080/vnc.html) to view the simulation.
+
 ## Syllabus
 > Part 1: Hello ROS
 > -  The elements of ROS, Command line tools, General command line tools 
