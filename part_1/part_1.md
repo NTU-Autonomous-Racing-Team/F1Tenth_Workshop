@@ -6,7 +6,6 @@ mkdir -p ros2_ws/src
 ```
 
 # Part 1 flow
-*Do we want to make them source the environment themselves?*
 1. Introduce CLI tools they need. cd, ls, mkdir, touch, mv, cp
 2. Introduce messages, nodes and different types of data transfer (pub-sub, services, actions)
 3. Building a Package & WS
@@ -20,3 +19,5 @@ mkdir -p ros2_ws/src
    - Copy/Move launch file into the package
    - colcon build
    - ros2 launch <launch_file>
+## Thoughts
+- Do we want to make them source the environment themselves?
