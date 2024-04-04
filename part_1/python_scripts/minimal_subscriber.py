@@ -7,12 +7,11 @@ from std_msgs.msg import String
 class MinimalSubscriber(Node):
 
     def __init__(self):
-        super().__init__('minimal_subscriber')
+        super().__init__("minimal_subscriber")
+        # TODO: replace '<topic_name>' with desired topic name
         self.subscription = self.create_subscription(
-            String,
-            'topic',
-            self.listener_callback,
-            10)
+            String, "<topic_name>", self.listener_callback, 10
+        )
         self.subscription  # prevent unused variable warning
 
     def listener_callback(self, msg):
@@ -33,5 +32,5 @@ def main(args=None):
     rclpy.shutdown()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
