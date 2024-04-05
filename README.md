@@ -102,6 +102,9 @@
 
 In your respective terminals run (Windows users need to make sure they're in WSL)
 ```sh
+cd jackal_ws/
+source /opt/ros/foxy/setup.bash
+source ./install/local_setup.bash
 ros2 launch jackal_gazebo jackal_world.launch.py
 ```
 If everything is working, a window should pop up. For MacOS users click on this link [http://localhost:8080/vnc.html](http://localhost:8080/vnc.html) to view the simulation.
