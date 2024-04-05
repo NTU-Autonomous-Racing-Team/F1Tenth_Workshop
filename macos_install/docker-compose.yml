@@ -1,0 +1,25 @@
+
+version: '1'
+services:
+  sim:
+    image: asme_ros
+    build: ./
+    volumes: 
+      - ..:/jackal_files/github_dir
+    environment:
+      - DISPLAY=novnc:0.0
+    networks:
+      - x11
+    stdin_open: true
+    tty: true 
+  novnc:  
+    image: theasp/novnc:latest
+    environment:
+      - DISPLAY_WIDTH=1728
+      - DISPLAY_HEIGHT=972
+    ports:
+      - "8080:8080"
+    networks:
+      - x11
+networks:
+  x11:
