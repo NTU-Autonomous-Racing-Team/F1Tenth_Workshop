@@ -19,6 +19,7 @@ RUN cd /jackal_files/jackal_ws/src && \
     git clone -b foxy-devel https://github.com/jackal/jackal.git && \
     git clone -b foxy-devel https://github.com/jackal/jackal_desktop.git && \
     git clone -b foxy-devel https://github.com/jackal/jackal_simulator.git
+    sed -i '59s/true/false/g' ./jackal/jackal_control/config/control.yaml
 
 RUN cd /jackal_files/jackal_ws && \
     source /opt/ros/foxy/setup.bash && \
