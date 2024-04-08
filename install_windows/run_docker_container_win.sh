@@ -10,7 +10,7 @@ create_container (){
       	--volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
         --privileged \
         --net=asme_net \
-	      -v $PWD/../:/jackal_files/github_dir \
+	      -v $PWD/../:/jackal_files/ \
         asme_ros
 }
 
