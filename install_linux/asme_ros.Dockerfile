@@ -21,8 +21,9 @@ RUN cd /jackal_files/jackal_ws/src && \
     git clone -b foxy-devel https://github.com/jackal/jackal_desktop.git && \
     git clone -b foxy-devel https://github.com/jackal/jackal_simulator.git && \
     sed -i '59s/true/false/g' ./jackal/jackal_control/config/control.yaml && \
-    sed -i '62s/4.0/25.0/g' ./jackal_ws/src/jackal/jackal_control/config/control.yaml && \
+    sed -i '62s/4.0/25.0/g' ./jackal/jackal_control/config/control.yaml && \
     sed -i '63s/4.0/25.0/g' ./jackal/jackal_control/config/control.yaml
+
 RUN cd /jackal_files/jackal_ws && \
     source /opt/ros/foxy/setup.bash && \
     apt-get update --fix-missing && \
