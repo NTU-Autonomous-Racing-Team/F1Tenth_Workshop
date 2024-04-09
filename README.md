@@ -5,7 +5,7 @@
 ## Windows
 
 1. [Install docker](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe)
-3. Install WSL by launching Windows Powershell and running the following command
+3. Install WSL by launching Windows Powershell as **administrator** and running the following command
    
     ```powershell
     wsl --install
@@ -24,13 +24,14 @@
    ```
 6. Clone this repository
    ```sh
-   git clone https://github.com/ASME-NTU/ROS2_Workshop.git ~/
+   git clone https://github.com/ASME-NTU/ROS2_Workshop.git ~/ROS2_Workshop/
    ```
+   If you can't copy paste, right click powershell then navigate to Properties > Tick "Use Ctrl+Shift+C/V as copy paste"
 8. Docker Setup
     - Setting up docker container
       
       ```sh
-      cd ~/ROS2_Workshop/windows_install/
+      cd ~/ROS2_Workshop/install_windows/
       sudo docker network create asme_net
       sudo docker build -f asme_ros.Dockerfile -t asme_ros .
       ```
@@ -60,12 +61,12 @@
 2.  Clone this repository
    
      ```sh
-     git clone https://github.com/ASME-NTU/ROS2_Workshop.git ~/
+     git clone https://github.com/ASME-NTU/ROS2_Workshop.git ~/ROS2_Workshop/
      ```
 3. Docker Setup
     - Setting up docker containers
       ```sh
-      cd ~/ROS2_Workshop/macos_install
+      cd ~/ROS2_Workshop/install_macos/
       docker compose -p asme_ros up -d
       ```
     
@@ -81,13 +82,13 @@
 3. Clone this repository
    
     ```sh
-    git clone https://github.com/ASME-NTU/ROS2_Workshop.git ~/
+    git clone https://github.com/ASME-NTU/ROS2_Workshop.git ~/ROS2_Workshop/
     ```
     
 5. Docker Setup
     - Setting up docker container      
       ```sh
-      cd ~/ROS2_Workshop/linux_install/
+      cd ~/ROS2_Workshop/install_linux/
       sudo docker network create asme_net
       sudo docker build -f asme_ros.Dockerfile -t asme_ros .
       ```
@@ -106,4 +107,4 @@ source /opt/ros/foxy/setup.bash
 source ./install/local_setup.bash
 ros2 launch jackal_gazebo jackal_world.launch.py
 ```
-If everything is working, a window should pop up. For MacOS users click on this link [http://localhost:8080/vnc.html](http://localhost:8080/vnc.html) to view the simulation.
+If everything is working, a window should pop up (It might take awhile for the simulation to startup when ran for the first time). For MacOS users click on this link [http://localhost:8080/vnc.html](http://localhost:8080/vnc.html) to view the simulation.
