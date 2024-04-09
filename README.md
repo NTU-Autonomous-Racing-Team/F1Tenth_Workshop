@@ -66,9 +66,8 @@
     - Setting up docker containers
       ```sh
       cd ~/ROS2_Workshop/macos_install
-      docker compose -p asme_ros up
+      docker compose -p asme_ros up -d
       ```
-      **CTRL+C** after everything is done to stop the docker containers
     
     - Run this script to start the docker containers
       ```sh

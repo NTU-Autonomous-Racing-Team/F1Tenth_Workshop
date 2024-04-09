@@ -32,9 +32,9 @@ class WallFollow(Node):
 
         self.drive_msg = Twist()
 
-        self.Kp = 0.50
-        self.Ki = 0.006
-        self.Kd = 0.001
+        self.Kp = 5.0
+        self.Ki = 0.00
+        self.Kd = 0.005
 
         self.integral = 0.0
         self.prev_error_1 = 0.0
@@ -43,7 +43,7 @@ class WallFollow(Node):
 
         self.longitudinal_vel = 0
         self.front_dist = 0
-        # self.oldVel = True
+        self.oldVel = True
 
     def getRange(self, scan_data, angle):
         ranges = scan_data.ranges
@@ -120,7 +120,7 @@ class WallFollow(Node):
             #     self.oldVel = True
 
             self.drive_msg.angular.z = round(angular_vel, 4)
-            self.drive_msg.linear.x = 0.5
+            self.drive_msg.linear.x = 2.0
             self.pub_drive.publish(self.drive_msg)
 
             self.get_logger().info(

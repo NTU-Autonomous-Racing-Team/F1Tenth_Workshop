@@ -5,7 +5,7 @@ services:
     image: asme_ros
     build: ./
     volumes: 
-      - ..:/jackal_files/github_dir
+      - ../:/jackal_files/github_dir
     environment:
       - DISPLAY=novnc:0.0
     networks:

@@ -8,10 +8,9 @@ create_container (){
       	--env="DISPLAY"\
       	--env="QT_X11_NO_MITSHM=1" \
       	--volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
-	      --volume="${XAUTHORITY}:/root/.Xauthority" \
         --privileged \
         --net=asme_net \
-	      -v $PWD/../:/jackal_files/github_dir \
+	      -v $PWD/../:/jackal_files/ \
         asme_ros
 }
 
@@ -32,7 +31,5 @@ then
 	docker exec -it ${container_name} bash
 else
 	rm_container
-	xhost + local:host
 	create_container
-	xhost - local:host
 fi
