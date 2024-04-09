@@ -69,7 +69,6 @@
       cd ~/ROS2_Workshop/install_macos/
       docker compose -p asme_ros up -d
       ```
-      **CTRL+C** after everything is done to stop the docker containers
     
     - Run this script to start the docker containers
       ```sh
@@ -108,38 +107,4 @@ source /opt/ros/foxy/setup.bash
 source ./install/local_setup.bash
 ros2 launch jackal_gazebo jackal_world.launch.py
 ```
-If everything is working, a window should pop up (It might take awhile as the simulation takes time to startup when first ran). For MacOS users click on this link [http://localhost:8080/vnc.html](http://localhost:8080/vnc.html) to view the simulation.
-
-## Syllabus
-> Part 1: Hello ROS
-> -  The elements of ROS, Command line tools, General command line tools 
->> 1. What is ROS? "use terminal to show rqtgraph of the whole thing that they will be building"  
->> 2. Messages, Nodes, Services, Actions, Packages  
->> Publisher-Subsciber [CODE]
->>> 2.1 building ros_ws  
->>> 2.2 building packages  
->>> 2.3 python3, ros2 run [CODE] and ros2 launch [CODE]
-
-> Part 2: Interacting with ROS
->> Gazebo - simulator with physics engine i.e diffeereent from rviz  
->> jackal bot - teleop no obs
->> - changing map [CODE]
-
-> Part 3: Sensing and Measurments
->> Pose and Odometry - one liners  
->> Lidar and Camera - selecting what to visualise
->> RVIZ
-
-> Part 4: Navigation and Local Planning  
-> - communicate the theory/ working principle of the planner. 
->> Bug0 \[Luthov CODE](main\), Bug1, Bug2 (optional  [CODE]) 
->> - self written into a separate script. (fill in the blanks)
->> - build package
->> DWA, TEB [visualise CODE]
->> - swapping planners [CODE]
-
-## Dependencies
-
-
-> ROS: Foxy
->> [ROS-foxy Docs](https://docs.ros.org/en/foxy/Tutorials.html)
+If everything is working, a window should pop up (It might take awhile for the simulation to startup when ran for the first time). For MacOS users click on this link [http://localhost:8080/vnc.html](http://localhost:8080/vnc.html) to view the simulation.
