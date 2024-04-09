@@ -3,11 +3,7 @@ launch:
 - node:
     pkg: "pub_sub"
     exec: "minimal_publisher"
-    name: "pub_sub"
-    namespace: "publisher"
 
 - node:
     pkg: "pub_sub"
     exec: "minimal_subscriber"
-    name: "pub_sub"
-    namespace: "subscriber"
