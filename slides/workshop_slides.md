@@ -2,8 +2,12 @@
 theme: default
 style: |
   section.lead h1 {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
+    position: absolute;
     text-align: center;
+    top: 20px;
+    left: 75px;
+    right: 75px;
   }
 paginate: false
 class: 
@@ -15,45 +19,42 @@ marp: true
 
 <style scoped>
 h1 {
-    font-size: 3.5rem; /* Adjust the font size as needed */
+    font-size: 3.5rem;
 }
 </style>
 
-# **ASME: ROS workshop**
-
+# **ASME <br /> ROS Workshop**
+### Luke <br /> NTU Autonomous Racing Team
 ---
-# Docker
 
-- How use? HELP ME
+<!-- tell windows users to launch wsl every time they open a new window -->
+CTRL+C is interrupt
+# Prequisites
+- Text editor
+- Terminal emulator
+- Github repository open in browser
 
 ---
 
 <style scoped>
+h2 {
+    text-align: center;
+}
+</style>
+## Make Robot Hard.
+
+---
+<style scoped>
 h1 {
-    font-size: 3.5rem; /* Adjust the font size as needed */
+    font-size: 3.5rem;
+    text-align: center;
+    top: 275px
 }
 </style>
 
-# **Part 1**
+# **What's ROS?**
 
-- General CLI tools
-- ROS2 CLI tools
-    - ros2 <command>
-    - visualisation tools
-- Building a ROS2 package
-- Pub-Sub code
-- Building a ROS2 workspace
-    - Types of workspaces (Tree Visualisation)
-- Running the nodes
-    - python3
-    - ros2 run
 
----
-
-- Launch files
-    - yaml
-    - xml
-    - python
 
 ---
 <style scoped>
@@ -63,32 +64,40 @@ h2 {
 }
 </style>
 
-# What is ROS?
-
-## Set of software frameworks and not an OS
-
-I need help
+## It's not an actual OS
 
 ---
 
+<style scoped>
+h2 {
+    text-align: center;
+    font-size: 1.5rem
+}
+</style>
+## A set of software frameworks for robot software development
+
+---
+<!-- Explain wtf is ros2 and what is difference and all --->
+
+<!-- Node is modular -->
 # Why use ROS?
 
+- A lot of prebuilt packages
 - Modular
 - Open-source
-- A lot of prebuilt packages
 
 ---
 
 # Nodes
-- Responsible for a single, modular purpose
+- An executable program or a running process that performs some kind of task
+- One node is responsible for a single, modular task
+
+---
+# A need for communication
 - 3 different types of data transfer
     - Publisher - Subscriber
     - Services
     - Actions
-
----
-# Messages
-I am a message yay
 
 ---
 
@@ -102,80 +111,79 @@ img[alt~="center"] {
 }
 </style>
 
+Change to 2 nodes
 ![width:800px center](pub_sub.gif)
 
 ---
+# Messages
 
-# Services 
-- Call - Respond
-- Only provide data when requested 
-```sh
-ros2 service call <service_name> <service_type>
-```
-- Spawn new entity at specified location (Example)
-
-<style>
-img[alt~="center"] {
-  display: block;
-  margin: 0 auto;
-}
-</style>
-
-![width:500px center](services.gif)
-
---- 
-
-# Actions
-<!--
-- Client - Server
-    1. Client send goal request
-    2. Server send goal response
-    3. Server send feedback as it's performing the action
-    4. Client request result
-    5. Server send result
--->
-<style>
-img[alt~="center"] {
-  display: block;
-  margin: 0 auto;
-}
-</style>
-
-![width:1000px center](actions.gif)
+## [std_msgs](http://docs.ros.org/en/melodic/api/std_msgs/html/msg/String.html)
+![width:1500px](std_msg_String.png)
 
 ---
+## [sensor_msgs](http://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/LaserScan.html)
+![width:2000px](sensor_msgs_LaserScan.png)
 
-# General CLI Tools
+---
+<style scoped>
+h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    top: 275px
+}
+</style>
 
+
+
+# **Some Terminal Stuff**
+
+<!--- Now, we'll get into some actual hands on stuff. Head over to the GitHub Repo and open up your terminals. If anyone needs help, feel free to ask any one of us. --->
+
+---
+# General Command Line Tools
+
+ASK THEM TO MOVE THE JACKAL_WS INTO GITHUB_DIR
+RMB TO CHANGE THE PATHS
 ```sh
-cd <folder/path_to_folder> 
+cd <folder/path_to_folder> # Change Directory
 cd ~/Documents # Example (~/ describes your home directory)
 
 ls # List files
 
-mv <path_to_file> <path_to_new_location>
+mv <path_to_file> <path_to_new_location> # Move
 mv ~/Downloads/file_to_be_moved ~/Documents/ # Example
 
 cp <path_to_file> <path_to_new_location> # Copies files or folders 
 
-mkdir <folder_name> # Creates a new folder
+mkdir <folder_name> # Make Directory a.k.a Creates a new folder
 mkdir ~/new_folder/ # Example
 
 touch <file_name> # Creates a blank file
 touch new_file_name # Example
 ```
 
----
+<!-- ---
 
 # ROS CLI Tools
 
-- need?
+```sh
+ros2 topic list
+ros2 topic echo <topic>
+
+ros2 run <package_name> <executable_name>
+ros2 launch <package_name> <launch_file>
+
+colcon build
+``` -->
+
 ---
-# ROS2 Workspaces
+# ROS Workspaces
 
 - What is a workspace
     - Directory containing ROS2 packages
-    - If source the installation workspace then the packages become available to ROS2
+    - Sourcing the installation workspace will make the packages in that workspace available to ROS `source ./install/local_setup.bash`
+
+Talk about diff projects have diff workspaces coz have diff packages so no conflict source thanks
 - 3 types of workspaces
     - Python
     - Cpp
@@ -219,9 +227,15 @@ ros_ws/
         ├── package.xml
         └── src/
 ```
-
+SRC NEED PACKAGE
 ---
-# Cpp & Python
+<style scoped>
+h1 {
+    font-size: 1.5rem;
+}
+</style>
+
+# Cpp & Python (Format bad)
 ```
 ros_ws/
 ├── build/
@@ -234,10 +248,6 @@ ros_ws/
     └── my_package/
         ├── CMakeLists.txt
         ├── package.xml
-        ├── config/
-        │   └── my_package_params.yaml
-        ├── launch/
-        │   └── my_package_launch.py
         ├── include/
         │   └── header_file.hpp
         ├── src/
@@ -247,12 +257,38 @@ ros_ws/
         └── scripts/
             └── my_package.py
 ```
+---
+# What's a package?
+- Organisational unit for ROS code
+- Makes it easier to share your ROS work with others
+
+---
+# Building a ROS2 package
+
+<!-- Havent introduced packages yet. Should probs do it in the beginning with qorkspaces etc -->
+
+<!--- Flow should be theory pract theory prac not theory theory theory pract pract pract -->
+
+<!-- ASK THEM TO BE IN THE GITHUB_DIR THEN DO THIS -->
+```sh
+mkdir -p ros_ws/src
+cd ros_ws/src
+ros2 pkg create --build-type ament_python pub_sub 
+```
+> NOTE: pub_sub can be changed to any name you want
+
+---
+
+<!-- Needed? -->
+# Creating your first publisher and subscriber
 
 ---
 
 # Minimal Publisher code
 
-## Imports
+<!-- Go to your text editor and open up the part_1 folder you'll see a folder called python_scripts. Open it up and view the minimal_publisher.py code -->
+
+<!-- ## Imports -->
 
 ```python
 import rclpy
@@ -260,11 +296,11 @@ from rclpy.node import Node
 
 from std_msgs.msg import String
 ```
-- Importing rclpy to be able to use the Node class
-- Importing pre-built String message type
+<!-- - Importing rclpy to be able to use the Node class
+- Importing pre-built String message type -->
 
 ---
-## Class initialisation
+<!-- ## Class initialisation -->
 
 ```python
 class MinimalPublisher(Node):
@@ -278,13 +314,13 @@ class MinimalPublisher(Node):
         self.timer = self.create_timer(timer_period, self.timer_callback)
         self.i = 0
 ```
-- Create MinimalPublisher class which inherits from parent class Node
+<!-- - Create `MinimalPublisher` class which inherits from parent class Node
 - Call parent class init method
-- Initialise publisher and timer callback
+- Initialise publisher and timer callback -->
 
 ---
 
-## Timer callback
+<!-- ## Timer callback -->
 
 ```python
     def timer_callback(self):
@@ -296,13 +332,13 @@ class MinimalPublisher(Node):
         self.get_logger().info('Publishing: "%s"' % msg.data)
         self.i += 1
 ```
-- Create String object
+<!-- - Create String object
 - Assign the desired message
 - Publish the message
-- Print debugging messages
+- Print debugging messages -->
 ---
 
-## Main
+<!-- ## Main -->
 
 ```python
 def main(args=None):
@@ -321,13 +357,13 @@ def main(args=None):
 if __name__ == "__main__":
     main()
 ```
-- rclpy library initialised
+<!-- - rclpy library initialised
 - Node object MinimalPublisher() created
-- Then spin the node
----
-# Minimal Subscriber code
+- Then spin the node -->
 
-## Imports
+<!-- Look up what __name__ does and add info here (only explain if someone asks) --->
+---
+# Minimal Subscriber
 
 ```python
 import rclpy
@@ -335,10 +371,10 @@ from rclpy.node import Node
 
 from std_msgs.msg import String
 ```
-- Same libraries as the publisher node
+<!-- - Same libraries as the publisher node -->
 
 ---
-## Initialisation
+<!-- ## Initialisation -->
 
 ```python
 class MinimalSubscriber(Node):
@@ -354,11 +390,11 @@ class MinimalSubscriber(Node):
     def listener_callback(self, msg):
         self.get_logger().info('I heard: "%s"' % msg.data)
 ```
-- Subscriber created instead of publisher
+<!-- - Subscriber created instead of publisher
 - Subscriber creates a callback that is run everytime a message is received
-- Callback prints the message to the terminal
+- Callback prints the message to the terminal -->
 ---
-## Main
+<!-- ## Main -->
 
 ```python
 def main(args=None):
@@ -378,33 +414,45 @@ def main(args=None):
 if __name__ == "__main__":
     main()
 ```
-- Code does the same thing as the publisher
+<!-- - Code does the same thing as the publisher -->
+
+---
+## Copy code to the package directory
+```sh
+cd pub_sub/pub_sub
+cp ~/jackal_files/github_dir/part_1/python_scripts/* ./
+```
 ---
 
-# Building a ROS2 package
+## Modifying setup.py
 
+Copy the file into the package directory
 ```sh
-mkdir -p ros2_ws/src
-cd ros2_ws/src
-ros2 pkg create --build-type ament_python <package_name> # TODO: Replace Package name
+cp /jackal_files/github_dir/part_1/setup.py /jackal_files/github_dir/ros_ws/src/pub_sub/
+```
+or add these lines
+```python
+import os # Add
+from glob import glob # Add
+from setuptools import setup
 ```
 
----
-# Copy code to the package directory
-
-```sh
-cd <package_name>/<package_name>
-cp ~/jackal_files/github_dir/part_1/python_scripts/*
+```python
+    entry_points={
+        "console_scripts": [
+            "minimal_publisher = pub_sub.minimal_publisher:main", # Add
+            "minimal_subscriber = pub_sub.minimal_subscriber:main", # Add
+        ],
 ```
-
 ---
-
-# Building a ROS2 Workspace
-
+## Building the ROS Workspace
 ```sh
-cd ../
+cd /jackal_files/github_dir/ros_ws/
 colcon build
 ```
+
+---
+
 The workspace should have these folders once finish building
 ```
 ros_ws/
@@ -422,21 +470,36 @@ ros_ws/
 ```sh
 source /opt/ros/foxy/setup.bash
 source ./install/local_setup.bash
-ros2 run <package_name> <executable/python_file>
+ros2 run pub_sub minimal_publisher.py
 ```
+> NOTE: To run the subscriber just replace minimal_publisher with minimal_subscriber
+## Executing it directly
 ```sh
-cd <package_name>/<package_name>
-python3 <executable/python_file> 
+cd /jackal_files/github_dir/ros_ws/src/pub_sub/pub_sub
+python3 minimal_publisher.py 
 ```
-
+> NOTE: Same thing applies here
 ---
 
-# Launch files
+
+<!--- Explain what launch files are
+main thing to note here is that the motivation is clear (why??)
+ --->
+
+<!-- Robot software stack become big so startup robot need to run a lot of nodes so use launch file save time ez win -->
+
+# What are launch files?
+
+- Used to run many nodes at the same time using one command `ros2 launch ...`
+
+---
+# Launch Files
+
 
 - 3 different types of launch files
-    - python
-    - yaml
-    - xml
+    - Python
+    - YAML
+    - XML
 
 ---
 ## Python
@@ -450,11 +513,11 @@ def generate_launch_description():
     return LaunchDescription(
         [
             Node(
-                package="<package_name>",
+                package="pub_sub",
                 executable="minimal_publisher",
             ),
             Node(
-                package="<package_name>",
+                package="pub_sub",
                 executable="minimal_subscriber",
             ),
         ]
@@ -483,35 +546,63 @@ launch:
 
 ```
 ---
+
+## Copy the launch folder
+```sh
+cp -r /jackal_files/github_dir/part_1/launch/ /jackal_files/github_dir/ros_ws/src/pub_sub/
+```
+## Edit setup.py file in the package directory
+```python
+    data_files=[
+        ('share/ament_index/resource_index/packages',
+            ['resource/' + package_name]),
+        ('share/' + package_name, ['package.xml']),
+        (os.path.join('share', package_name, 'launch'), glob(os.path.join('launch', '*launch.[pxy][yma]*'))) # Add
+    ],
+```
+> Skip this step if you copied the setup.py file earlier
+
+---
 ## Running the launch file
 ```sh
 ros2 launch <package_name> launch.py 
 ```
-**File extension depends on which launch file you want to use (launch.xml/launch.yaml)**
+> NOTE: file extension depends on which launch file you want to use (launch.xml/launch.yaml)
 
 ---
+<style scoped>
+h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    top: 275px
+}
+</style>
 
-# **Part 2**
-- Jackal sim
-- teleop
-- Build map in gazebo
-- Change world to newly built map
-    - cp world file
-    - edit launch file
+# **Let's simulate**
 
 ---
 
 # Simulation
-What put here? Explain Jackal???????
-- ```sh
-  ros2 topic list
-  ```
-- Important topics (/cmd_vel, /front/scan)
+<!-- Why simulators? The fact that a lot of simulators support ros (?). Whats jackal (very brief) -->
+<!-- What's gazebo and why (brief) -->
+
+- Expensive and time consuming to test on physical robot
+- Jackal is an open source, robotic platform which is built on ROS and Gazebo
+- Gazebo is a simulation not made specifically for ROS but can be used with it
 
 ---
 
 # Commands to run sim and teleop
 
+<!-- Verbally explain what teleop is -->
+
+Move the jackal_ws into the github directory
+```sh
+mv /jackal_files/jackal_ws/ /jackal_files/github_dir
+cd /jackal_files/github_dir/jackal_ws
+rm -rf build/ install/ log/
+colcon build
+```
 Launch the jackal simulator
 ```sh
 ros2 launch jackal_gazebo jackal_world.launch.py
@@ -521,7 +612,6 @@ Run the pre-built teleop node
 ```sh
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
-**Read instructions when launch node pls don't bbe noob thanks**
 
 ---
 
@@ -533,41 +623,85 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
     ```
 2. Place models or shapes
 ![width:700px](gazebo_models.png)
-3. Then save the file by navigating to File > Save World As. Then choose the location to save and remember it
-3. Save the file in worlds folder?
+3. Then save the file by navigating to `File > Save World As` and name it `custom_world.world`. 
+Then save it at this directory `/jackal_files/jackal_ws/src/jackal_simulator/jackal_gazebo/worlds/`
 
 ---
 
 # Use newly built map
 
-- Copy the launch file and rename it something else
+<!-- provide the path -->
+<!--- always remember to explain why tf were doing all this -->
+
+<!-- test out algos in different types of maps to see robust or not blah bal -->
+
+## Copy the launch file and rename it 
+```sh
+ cd /jackal_files/jackal_ws/src/jackal_simulator/jackal_gazebo/launch/
+ cp jackal_world.launch.py custom_world.launch.py
 ```
-give them code or let them figure out????
+## Edit the launch file
+
+```python
+def generate_launch_description():
+
+    world_file = PathJoinSubstitution(
+        [FindPackageShare('jackal_gazebo'),
+        'worlds',
+        'custom_world.world'], # Changed
+    )
 ```
+---
 - Rebuild the workspace
 ```sh
+cd jackal_files/github_dir/jackal_ws/
 colcon build
 ```
+> Make sure you're at the root of the workspace `jackal_ws/`
 - Launch the new file
 ```sh
-ros2 launch LMAO U SUCK
+source ./install/local_setup.bash
+ros2 launch jackal_gazebo custom_world.launch.py
 ```
 ---
 
-# **Part 3**
+<style scoped>
+h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    top: 275px
+}
+</style>
+
+# **Debugging**
+<!-- motivation: problem when build; need good tools to solve problem. how ros provide good tool and how we use them? --->
 
 ---
 
 # Sensor topics and msgs
 
 ```sh
-ros2 topic echo /scan
-ros2 topic echo /odom
-ros2 topic echo --no-arr /odom
+ros2 topic echo <topic_name>
 ```
-
+---
+# Twist
+```sh
+ros2 topic echo /cmd_vel
+```
+```sh
+linear:
+  x: 0.5
+  y: 0.0
+  z: 0.0
+angular:
+  x: 0.0
+  y: 0.0
+  z: 0.0
+```
 ---
 # LaserScan
+<!-- what's laserscan? whats angle_increment? -->
+
 ```sh
 ros2 topic echo front/scan
 ```
@@ -590,7 +724,7 @@ ranges:
 ```
 ---
 # Odometry
-
+<!-- same comment as laserscan -->
 ```sh
 ros2 topic echo --no-arr /odom
 ```
@@ -605,6 +739,7 @@ child_frame_id: base_link
 ```
 ---
 ## Pose
+<!-- same comment as laserscan -->
 ```sh
 pose:
   pose:
@@ -621,6 +756,7 @@ pose:
 ```
 ---
 ## Twist
+<!-- same comment as laserscan -->
 ```sh
 twist:
   twist:
@@ -642,15 +778,29 @@ twist:
 ```sh
 ros2 launch jackal_viz view_model.launch.py
 ```
-Add LaserScan (Do I need Pics?)
+
+![width:600px](add_rviz2.png)
+
+---
+
+![width:1500px](add_laserscan.png)
+
+---
 
 ## New session of rviz
 ```sh
 rviz2
 ```
-Add LaserScan and axes
 
 ---
+
+<style scoped>
+h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    top: 275px
+}
+</style>
 
 # **Part 4**
 
@@ -664,19 +814,23 @@ Add LaserScan and axes
 
 # wall_follow
 
-- Explain wall_follow algo?
-
 ## Run wall_follow in jackal sim
+<!-- Navigate to part_4 folder -->
+
+```sh
+python3 wall_follow.py
+```
+
 ---
 
 # Run Bug0
 
-- Same thing here?
-
 ## Run Bug0 in jackal sim
+
 ---
 
-# Additional resources
+# Additional resources (and References)
 ## [ros2 (foxy) tutorials](https://docs.ros.org/en/foxy/Tutorials.html)
-Note ros2 foxy is EOL
+> Note ros2 foxy is EOL
 ## [jackal](https://clearpathrobotics.com/assets/guides/foxy/jackal/index.html)
+f1tenth -- advertise
