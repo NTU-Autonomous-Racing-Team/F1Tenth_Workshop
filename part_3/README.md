@@ -1,13 +1,21 @@
-1. Let them echo the sensor topics, talk about the sensor msg and show them the components
-   - ```sh
-     ros2 topic echo /scan
-     ros2 topic echo /odom
-     ros2 topic echo --no-arr /odom
-     ```
-2. Launch Rviz and show them how to visualise the sensor data
-   - Show jackal view model
-     ```sh
-     ros2 launch jackal_viz view_model.launch.py
-     ```
-   - Show with new session of Rviz
+```sh
+ros2 topic echo <topic_name>
+ros2 topic hz <topic_name>
+ros2 topic info <topic_name>
+```
+
+```sh
+ros2 topic echo /cmd_vel
+```
   
+```sh
+ros2 topic echo front/scan
+```
+
+```sh
+ros2 topic echo --no-arr /odom
+```
+
+```sh
+rviz2
+```

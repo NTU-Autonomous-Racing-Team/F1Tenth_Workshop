@@ -1,7 +1,13 @@
-## Part 4
+## Run wall_follow in jackal sim
 
-1. Communicate the theory/working principle of the planner
-2. Show wall_follow in jackal sim
-3. Show Bug 0
+```sh
+cd /jackal_ws/github_dir/part_4/
+python3 wall_follow.py
+```
 
-Maybe can show F1Tenth simulator also real quick but they don't need to install just show in the workshop itself
+# Additional resources (and References)
+## [ros2 (foxy) tutorials](https://docs.ros.org/en/foxy/Tutorials.html)
+> Note ros2 foxy is EOL
+
+## [jackal](https://clearpathrobotics.com/assets/guides/foxy/jackal/index.html)
+

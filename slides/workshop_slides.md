@@ -154,11 +154,12 @@ mv ~/Downloads/file_to_be_moved ~/Documents/ # Example
 cp <path_to_file> <path_to_new_location> # Copies files or folders 
 
 mkdir <folder_name> # Make Directory a.k.a Creates a new folder
-mkdir ~/new_folder/ # Example
+mkdir ~/new_folder/ # example
 
 touch <file_name> # Creates a blank file
 touch new_file_name # Example
 ```
+> NOTE: Use `CTRL+C` to interrupt a process
 ---
 
 # ROS Workspaces
@@ -208,7 +209,7 @@ ros_ws/
     └── src/
         └── my_package.cpp
 ```
-SRC NEED PACKAGE
+
 ---
 <style scoped>
 h1 {
@@ -398,11 +399,13 @@ if __name__ == "__main__":
 <!-- - Code does the same thing as the publisher -->
 
 ---
+
 ## Copy code to the package directory
 ```sh
 cd pub_sub/pub_sub
 cp ~/jackal_files/github_dir/part_1/python_scripts/* ./
 ```
+
 ---
 
 ## Modifying setup.py
@@ -426,7 +429,9 @@ from setuptools import setup
             "minimal_subscriber = pub_sub.minimal_subscriber:main", # Added
         ],
 ```
+
 ---
+
 ## Building the ROS Workspace
 ```sh
 cd /jackal_files/github_dir/ros_ws/
@@ -822,5 +827,4 @@ python3 wall_follow.py
 > Note ros2 foxy is EOL
 ## [jackal](https://clearpathrobotics.com/assets/guides/foxy/jackal/index.html)
 
-F1Tenth
-- contact number
+## F1Tenth Team
