@@ -26,7 +26,7 @@
    ```sh
    git clone https://github.com/ASME-NTU/ROS2_Workshop.git ~/ROS2_Workshop/
    ```
-   If you can't copy paste, right click powershell then navigate to Properties > Tick "Use Ctrl+Shift+C/V as copy paste"
+   > If you can't copy paste, right click powershell then navigate to `Properties > Tick "Use Ctrl+Shift+C/V as copy paste`"
 8. Docker Setup
     - Setting up docker container
       
