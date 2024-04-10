@@ -26,7 +26,7 @@
    ```sh
    git clone https://github.com/ASME-NTU/ROS2_Workshop.git ~/ROS2_Workshop/
    ```
-   If you can't copy paste, right click powershell then navigate to Properties > Tick "Use Ctrl+Shift+C/V as copy paste"
+   > If you can't copy paste, right click powershell then navigate to `Properties > Tick "Use Ctrl+Shift+C/V as copy paste`"
 8. Docker Setup
     - Setting up docker container
       
@@ -43,11 +43,16 @@
       
 ## MacOS
 
-1. Installing dependencies
+### **If you have homebrew installed already, you can skip to installing git**
    - Make sure xcode-select is installed by launching a terminal and running this command
      ```sh
      xcode-select --install
      ```
+     > If it is installed you will see this in your terminal
+     >
+     > `xcode-select: note: Command line tools are already installed. Use "Software Update" in System Settings or the softwareupdate command line interface to install updates`
+     > 
+     > This step will take some time if you don't have xcode installed
    - Install Homebrew
      ```sh
      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -63,7 +68,8 @@
      ```sh
      git clone https://github.com/ASME-NTU/ROS2_Workshop.git ~/ROS2_Workshop/
      ```
-3. Docker Setup
+3. Launch Docker
+4. Docker Setup
     - Setting up docker containers
       ```sh
       cd ~/ROS2_Workshop/install_macos/
@@ -107,4 +113,4 @@ source /opt/ros/foxy/setup.bash
 source ./install/local_setup.bash
 ros2 launch jackal_gazebo jackal_world.launch.py
 ```
-If everything is working, a window should pop up (It might take awhile for the simulation to startup when ran for the first time). For MacOS users click on this link [http://localhost:8080/vnc.html](http://localhost:8080/vnc.html) to view the simulation.
+If everything is working, a window should pop up (It might take awhile for the simulation to startup when ran for the first time). For MacOS users click on this link [http://localhost:8080/vnc.html](http://localhost:8080/vnc.html) and click on connect to view the simulation.
