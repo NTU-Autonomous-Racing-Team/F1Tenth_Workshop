@@ -10,7 +10,7 @@ class MinimalPublisher(Node):
         super().__init__('minimal_publisher')
         # TODO: Replace <topic_name> with desired topic name
         self.publisher_ = self.create_publisher(String, '<topic_name>', 10)
-        # TODOL Replace <period> with desired timer period in seconds
+        # TODO: Replace <period> with desired timer period in seconds
         timer_period = <period>  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
         self.i = 0
