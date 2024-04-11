@@ -26,6 +26,7 @@ touch new_file_name # Example
 ```sh
 mkdir -p /jackal_files/github_dir/ros_ws/src
 cd /jackal_files/github_dir/ros_ws/src
+source /opt/ros/foxy/setup.bash
 ros2 pkg create --build-type ament_python pub_sub 
 ```
 
@@ -92,8 +93,15 @@ cp -r /jackal_files/github_dir/part_1/launch/ /jackal_files/github_dir/ros_ws/sr
 > Skip this step if you copied the `setup.py` file earlier
 
 ---
+## Rebuild the workspace
+```sh
+cd /jackal_files/github_dir/ros_ws/
+colcon build
+```
 ## Running the launch file
 ```sh
+source /opt/ros/foxy/setup.bash
+source ./install/local_setup.bash
 ros2 launch pub_sub launch.py 
 ```
 > NOTE: file extension depends on which launch file you want to use (launch.xml/launch.yaml)

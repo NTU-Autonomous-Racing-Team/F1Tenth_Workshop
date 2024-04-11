@@ -154,9 +154,12 @@ ros_ws/
 ### C++ Workspace
 ```
 ros_ws/
-├── build
-├── install
-├── log
+├── build/
+│   └── ...
+├── install/
+│   └── ...
+├── log/
+│   └── ...
 └── src/
     ├── CMakeLists.txt
     ├── include/my_package/
@@ -238,6 +241,7 @@ touch new_file_name # Example
 ```sh
 mkdir -p /jackal_files/github_dir/ros_ws/src
 cd /jackal_files/github_dir/ros_ws/src
+source /opt/ros/foxy/setup.bash
 ros2 pkg create --build-type ament_python pub_sub 
 ```
 > NOTE: pub_sub can be changed to any name you want
@@ -269,7 +273,7 @@ class MinimalPublisher(Node):
         super().__init__('minimal_publisher')
         # TODO: Replace <topic_name> with desired topic name
         self.publisher_ = self.create_publisher(String, '<topic_name>', 10)
-        # TODOL Replace <period> with desired timer period in seconds
+        # TODO: Replace <period> with desired timer period in seconds
         timer_period = <period>  # seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
         self.i = 0
@@ -420,10 +424,10 @@ colcon build
 
 ```
 ros_ws/
-├── build
-├── install
-├── log
-└── src
+├── build/
+├── install/
+├── log/
+└── src/
 ```
 ---
 
@@ -529,8 +533,15 @@ cp -r /jackal_files/github_dir/part_1/launch/ /jackal_files/github_dir/ros_ws/sr
 > Skip this step if you copied the `setup.py` file earlier
 
 ---
+### Rebuild the workspace
+```sh
+cd /jackal_files/github_dir/ros_ws/
+colcon build
+```
 ### Running the launch file
 ```sh
+source /opt/ros/foxy/setup.bash
+source ./install/local_setup.bash
 ros2 launch pub_sub launch.py 
 ```
 > NOTE: file extension depends on which launch file you want to use (launch.xml/launch.yaml)
@@ -652,7 +663,7 @@ ros2 topic hz <topic_name>
 ros2 topic info <topic_name>
 ```
 ---
-### Twist
+### geometry_msgs/Twist
 ```sh
 ros2 topic echo /cmd_vel
 ```
@@ -667,7 +678,7 @@ angular:
   z: 0.0
 ```
 ---
-### LaserScan
+### sensor_msgs/LaserScan
 <!-- what's laserscan? whats angle_increment? -->
 
 ```sh
@@ -691,7 +702,7 @@ ranges:
 - ...
 ```
 ---
-### Odometry
+### nav_msgs/Odometry
 <!-- same comment as laserscan -->
 ```sh
 ros2 topic echo --no-arr /odom
