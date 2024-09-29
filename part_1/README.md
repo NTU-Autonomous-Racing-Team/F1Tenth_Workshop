@@ -33,7 +33,7 @@ ros2 pkg create --build-type ament_python pub_sub
 ## Copy pub_sub code into the package
 ```sh
 cd pub_sub/pub_sub
-cp ~/jackal_files/github_dir/part_1/python_scripts/* ./
+cp /jackal_files/github_dir/part_1/python_scripts/* ./
 ```
 ## Modifying setup.py
 
@@ -67,7 +67,7 @@ colcon build
 ```sh
 source /opt/ros/foxy/setup.bash
 source ./install/local_setup.bash
-ros2 run pub_sub minimal_publisher.py
+ros2 run pub_sub minimal_publisher
 ```
 > NOTE: To run the subscriber just replace minimal_publisher with minimal_subscriber
 ## Executing it directly
