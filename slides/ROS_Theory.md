@@ -97,15 +97,113 @@ h3 {
 
 ---
 
+<style>
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+</style>
 
+![width:800px center](multi_pub_sub.gif)
+
+---
 # ROS Messages
 
-- ROS messages define the data exchanged between nodes
-- Predefined message types (e.g., `sensor_msgs`, `geometry_msgs`)
-- Example message:
+- ROS messages are the way that nodes communicate with each other in ROS.
+- Think of a message as a piece of data that a node sends or receives.
+- A message has a fixed structure that defines what kind of data it can carry (e.g. `sensor_msgs`, `geometry_msgs`)
+- Holds different types of data together
+---
 
-```cpp
-# geometry_msgs/Point
-float64 x
-float64 y
-float64 z
+## Example: LaserScan Message
+
+- **`sensor_msgs/LaserScan`** is used to communicate data from a LIDAR sensor.
+- It contains:
+  - **Header**: Timestamp and frame ID
+  - **Angle** and **range** arrays for LIDAR measurements
+
+```plaintext
+std_msgs/Header header
+float32 angle_min
+float32 angle_max
+float32[] ranges
+```
+---
+## Example: Odom (Odometry) Message
+
+- **`nav_msgs/Odometry`** is used for representing robot's movement in space.
+- Contains:
+  - **Pose**: Position and orientation.
+  - **Twist**: Velocity information (linear and angular).
+
+```plaintext
+std_msgs/Header header
+geometry_msgs/PoseWithCovariance pose
+geometry_msgs/TwistWithCovariance twist
+```
+---
+## Example: Ackermann Steering Message
+
+- **`ackermann_msgs/AckermannDrive`** is used for controlling vehicle steering.
+- Contains:
+  - **Steering angle**: Angle to turn the wheels.
+  - **Speed**: Forward velocity of the vehicle.
+
+```plaintext
+float32 steering_angle
+float32 speed
+```
+
+---
+
+# ROS Workspaces
+
+ ### A workspace is a collection of ROS2 packages and nodes for a specific project.
+- It contains important directories:
+  - **`src`**: Source code for packages
+  - **`build`**: Compiled binaries
+  - **`devel`**: Development environment setup
+- **Remember** to source the installation workspace to have the packages in that workspace available to you  **`source ./install/local_setup.bash`**
+
+
+---
+## Python Workspace
+```
+ros_ws/
+├── build/
+│   └── ...
+├── install/
+│   └── ...
+├── log/
+│   └── ...
+└── src/
+    └── my_package/
+        ├── package.xml
+        ├── resource/my_package
+        ├── setup.cfg
+        ├── setup.py
+        └── my_package/
+            └── package.py
+```
+---
+# ROS Packages
+
+### A ROS package is the basic building block of ROS projects.
+It contains:
+- Nodes
+- Message and service definitions
+- Launch files
+- Metadata files like CMakeLists.txt and package.xml
+
+**Makes it easier to share code with others**
+
+
+
+
+
+<!-- ## Creating a Workspace
+
+1. Create the workspace directory and the `src` folder:
+   ```bash
+   mkdir -p ~/ros2_ws/src
+   cd ~/ros2_ws/ -->
