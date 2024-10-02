@@ -29,13 +29,13 @@ marp: true
 
 # Contents
 
-1. ROS2 and the Terminal
-2. ROS2 Workspaces
-3. ROS2 Packages
-4. Publishing
-5. Subscribing
-6. Additional
-7. References
+1. [ROS2 and the Terminal](#1-ros2-and-the-terminal)
+2. [ROS2 Workspaces](#2-ros2-workspaces)
+3. [ROS2 Packages](#3-ros-packages)
+4. [Publishing](#4-publisher)
+5. [Subscribing](#5-subscriber)
+6. [Additional](#6-additional)
+7. [References](#7-references)
 
 ---
 
@@ -69,7 +69,7 @@ colcon build
 
 ---
 
-# 2. ROS Workspaces
+# 2. ROS2 Workspaces cont.
 
 -   `build` - contains the return of your building. i.e. your executables
 -   `install` - workspace’s setup files are, which you can use to source your overlay. i.e. lets you run packages from the workspace
@@ -101,6 +101,10 @@ ros2 pkg create my_package --build-type ament_python --node-name my_node --depen
 
 -   [minimal_publisher.py](./ros2_ws/src/my_package/mypackage/minimal_publisher.py)
 
+---
+
+# 4. Publisher cont.
+
 2. Adding your script as an executable. Open `setup.py`
 
 ```
@@ -112,7 +116,9 @@ entry_points = {
 }
 ```
 
-# 4. Publisher
+---
+
+# 4. Publisher cont.
 
 3. Build your package
 
@@ -137,6 +143,10 @@ ros2 run my_package minimal_publisher
 
 -   [minimal_subscriber.py](./ros2_ws/src/my_package/mypackage/minimal_subscriber.py)
 
+---
+
+# 5. Subscriber cont.
+
 2. Adding your script as an executable. Open `setup.py`
 
 ```
@@ -150,7 +160,7 @@ entry_points = {
 
 ---
 
-# 5. Subscriber
+# 5. Subscriber cont.
 
 3. Build your package
 
@@ -173,8 +183,8 @@ ros2 run my_package minimal_publisher
 
 # 6. Additional
 
--   Additional Info
--   ROS2 Messages
+-   [Additional Info](#additional-info)
+-   [ROS2 Messages](#ros2-messages)
 
 ---
 
@@ -218,7 +228,7 @@ ament_export_dependencies(rosidl_default_runtime)
 
 ---
 
-# ROS2 Messages
+# ROS2 Messages cont.
 
 3. Edit the `package.xml`
 
@@ -231,7 +241,7 @@ ament_export_dependencies(rosidl_default_runtime)
 
 ---
 
-# ROS2 Messages
+# ROS2 Messages cont.
 
 4. Create your message file:
 
@@ -244,7 +254,7 @@ touch my_msg.msg
 
 ---
 
-# ROS2 Messages
+# ROS2 Messages cont.
 
 5. Define your message file.
 
@@ -253,7 +263,7 @@ touch my_msg.msg
 
 ---
 
-# ROS2 Messages
+# ROS2 Messages cont.
 
 6. Build, Source and Run
 
@@ -270,5 +280,5 @@ ros2 topic echo some_topic
 
 -   [Creating a Workspace](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.html)
 -   [Creating a Package](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html)
--   [Simple Pusblisher/ Subscriber](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.html)
+-   [Simple Pusblisher/ Subscriber (Python)](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.html)
 -   [Create Custom Message](https://roboticsbackend.com/ros2-create-custom-message/#Using_existing_messagesinterfaces)
