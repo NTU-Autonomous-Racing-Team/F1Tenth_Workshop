@@ -30,9 +30,12 @@ marp: true
 # Contents
 
 1. ROS2 and the Terminal
-2. ROS2 Python Scripts
-3. ROS2 Workspaces
-4. Packages
+2. ROS2 Workspaces
+3. ROS2 Packages
+4. Publishing
+5. Subscribing
+6. Additional
+7. References
 
 ---
 
@@ -46,9 +49,11 @@ marp: true
 -   Viewing messages of a topic
     `ros2 topic echo /topic_name`
 
+<!--_paginate:true-->
+
 ---
 
-# 2. ROS Workspaces
+# 2. ROS2 Workspaces
 
 -   A workspace is a directory containing ROS 2 packages.
 -   Creating a ROS2 workspace:
@@ -109,8 +114,6 @@ entry_points = {
 }
 ```
 
----
-
 # 4. Publisher
 
 3. Build your package
@@ -170,25 +173,40 @@ ros2 run my_package minimal_publisher
 
 ---
 
-# Additional
+# 6. Additional
+
+-   Additional Info
+-   ROS2 Messages
+
+---
+
+# Additional Info
 
 -   Running as Python script as it is a quick way to tune parameters.
 
 ```
 python3 minimal_pubsub.py
 ```
-- Publishing and Subscribing in the same node. [minimal_pubsub](./ros2_ws/src/my_package/mypackage/minimal_pubsub.py)
+
+-   Publishing and Subscribing in the same node. [minimal_pubsub](./ros2_ws/src/my_package/mypackage/minimal_pubsub.py)
+
 ```
 ros2 run my_package minimal_pubsub
 
 ```
+
+-   Developing ROS2 packages in C++ `ros2 pkg create cpp_package --build-type ament_cmake
+
 ---
 
-# ROS2 Created Messages
-- Rarely, altough sometimes, you'll need to create your own ROS messages. 
-- Steps:
+# ROS2 Messages
+
+-   Rarely, altough sometimes, you'll need to create your own ROS messages.
+-   Steps:
+
 1. Initialise a ros2 package `ros2 pkg create my_msgs --dependencies std_msgs geometry_msgs`
 2. Edit the `CMakeList`:
+
 ```
 find_package(rosidl_default_generators REQUIRED)
 
@@ -199,7 +217,13 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 ament_export_dependencies(rosidl_default_runtime)
 
 ```
+
+---
+
+# ROS2 Messages
+
 3. Edit the `package.xml`
+
 ```
   <buildtool_depend>rosidl_default_generators</buildtool_depend>
   <exec_depend>rosidl_default_runtime</exec_depend>
@@ -207,7 +231,12 @@ ament_export_dependencies(rosidl_default_runtime)
 
 ```
 
+---
+
+# ROS2 Messages
+
 4. Create your message file:
+
 ```
 cd ~/ros2_ws/src/
 mkdir msgs
@@ -215,14 +244,33 @@ cd msgs
 touch my_msg.msg
 ```
 
-5. Define your message file. 
-- This uses other ROS2 messages e.g. std_msgs, geometry_msgs
-- [my_msg.msg](./ros2_ws/src/my_msgs/msgs/MyMessage.msg)
+---
+
+# ROS2 Messages
+
+5. Define your message file.
+
+-   This uses other ROS2 messages e.g. std_msgs, geometry_msgs
+-   [my_msg.msg](./ros2_ws/src/my_msgs/msgs/MyMessage.msg)
+
+---
+
+# ROS2 Messages
 
 6. Build, Source and Run
+
 ```
 colcon build --packages-select my_msgs
 source ~/ros2_ws/install/local_setup.bash
 ros2 topic pub -r 1 some_topic my_msgs/my_msg "{name: "Lawrence", some_integer: 10, some_vector: [1, 2]}"
 ros2 topic echo some_topic
 ```
+
+---
+
+# 7. References
+
+-   [Creating a Workspace](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Creating-A-Workspace/Creating-A-Workspace.html)
+-   [Creating a Package](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html)
+-   [Simple Pusblisher/ Subscriber](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.html)
+-   [Create Custom Message](https://roboticsbackend.com/ros2-create-custom-message/#Using_existing_messagesinterfaces)
