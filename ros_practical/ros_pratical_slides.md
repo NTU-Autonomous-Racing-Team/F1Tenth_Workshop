@@ -96,7 +96,7 @@ ros2 pkg create my_package --build-type ament_python --node-name my_node --depen
 
 1. Writing your first publisher script
 
--   [minimal_publisher.py](./minimal_publisher.py)
+-   [minimal_publisher.py](./ros2_ws/src/my_package/mypackage/minimal_publisher.py)
 
 2. Adding your script as an executable. Open `setup.py`
 
@@ -134,7 +134,7 @@ ros2 run my_package minimal_publisher
 
 1. Writing your first subscriber script
 
--   [minimal_subscriber](./minimal_subscriber.py)
+-   [minimal_subscriber.py](./ros2_ws/src/my_package/mypackage/minimal_subscriber.py)
 
 2. Adding your script as an executable. Open `setup.py`
 
@@ -176,4 +176,53 @@ ros2 run my_package minimal_publisher
 
 ```
 python3 minimal_pubsub.py
+```
+- Publishing and Subscribing in the same node. [minimal_pubsub](./ros2_ws/src/my_package/mypackage/minimal_pubsub.py)
+```
+ros2 run my_package minimal_pubsub
+
+```
+---
+
+# ROS2 Created Messages
+- Rarely, altough sometimes, you'll need to create your own ROS messages. 
+- Steps:
+1. Initialise a ros2 package `ros2 pkg create my_msgs --dependencies std_msgs geometry_msgs`
+2. Edit the `CMakeList`:
+```
+find_package(rosidl_default_generators REQUIRED)
+
+rosidl_generate_interfaces(${PROJECT_NAME}
+	"msgs/MyMessage.msg"
+)
+
+ament_export_dependencies(rosidl_default_runtime)
+
+```
+3. Edit the `package.xml`
+```
+  <buildtool_depend>rosidl_default_generators</buildtool_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+  <member_of_group>rosidl_interface_packages</member_of_group>
+
+```
+
+4. Create your message file:
+```
+cd ~/ros2_ws/src/
+mkdir msgs
+cd msgs
+touch my_msg.msg
+```
+
+5. Define your message file. 
+- This uses other ROS2 messages e.g. std_msgs, geometry_msgs
+- [my_msg.msg](./ros2_ws/src/my_msgs/msgs/MyMessage.msg)
+
+6. Build, Source and Run
+```
+colcon build --packages-select my_msgs
+source ~/ros2_ws/install/local_setup.bash
+ros2 topic pub -r 1 some_topic my_msgs/my_msg "{name: "Lawrence", some_integer: 10, some_vector: [1, 2]}"
+ros2 topic echo some_topic
 ```
