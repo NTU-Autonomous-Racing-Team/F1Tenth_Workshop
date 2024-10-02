@@ -49,8 +49,6 @@ marp: true
 -   Viewing messages of a topic
     `ros2 topic echo /topic_name`
 
-<!--_paginate:true-->
-
 ---
 
 # 2. ROS2 Workspaces
