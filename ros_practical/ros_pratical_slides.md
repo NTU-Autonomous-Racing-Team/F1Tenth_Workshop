@@ -99,7 +99,7 @@ ros2 pkg create my_package --build-type ament_python --node-name my_node --depen
 
 1. Writing your first publisher script
 
--   [minimal_publisher.py](./ros2_ws/src/my_package/mypackage/minimal_publisher.py)
+-   [minimal_publisher.py](./ros2_ws/src/my_package/my_package/minimal_publisher.py)
 
 ---
 
@@ -141,7 +141,7 @@ ros2 run my_package minimal_publisher
 
 1. Writing your first subscriber script
 
--   [minimal_subscriber.py](./ros2_ws/src/my_package/mypackage/minimal_subscriber.py)
+-   [minimal_subscriber.py](./ros2_ws/src/my_package/myp_ackage/minimal_subscriber.py)
 
 ---
 
@@ -196,7 +196,7 @@ ros2 run my_package minimal_publisher
 python3 minimal_pubsub.py
 ```
 
--   Publishing and Subscribing in the same node. [minimal_pubsub](./ros2_ws/src/my_package/mypackage/minimal_pubsub.py)
+-   Publishing and Subscribing in the same node. [minimal_pubsub](./ros2_ws/src/my_package/my_package/minimal_pubsub.py)
 
 ```
 ros2 run my_package minimal_pubsub
