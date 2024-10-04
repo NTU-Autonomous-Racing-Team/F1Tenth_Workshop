@@ -162,7 +162,7 @@ float32 speed
 - It contains important directories:
   - **`src`**: Source code for packages
   - **`build`**: Compiled binaries
-  - **`devel`**: Development environment setup
+  - **`install`**: Development environment setup
 - **Remember** to source the installation workspace to have the packages in that workspace available to you  **`source ./install/local_setup.bash`**
 
 
@@ -183,7 +183,7 @@ ros_ws/
         ├── setup.cfg
         ├── setup.py
         └── my_package/
-            └── package.py
+            └── node.py
 ```
 ---
 # ROS Packages
@@ -198,9 +198,49 @@ It contains:
 **Makes it easier to share code with others**
 
 
+---
 
+<style scoped>
+h2 {
+    text-align: center;
+    position: UNSET;
+    color: white;
+}
+</style>
+# ROS2 Launch Files
 
+## What are Launch Files?
 
+- A **launch file** is a script that automates the process of starting multiple nodes and setting configurations in ROS2.
+- Instead of manually starting each node, a launch file can launch them all together.
+- They are written in Python in ROS2 (unlike XML in ROS1).
+
+---
+
+## Why Use Launch Files?
+
+- Simplifies running multiple nodes, especially in complex systems.
+- Allows for setting parameters, remapping topics, and configuring environments.
+- Great for automating testing and deployment of robots.
+
+---
+# Launch File Example
+
+```python
+# my_launch_file.py
+from launch import LaunchDescription
+from launch_ros.actions import Node
+
+def generate_launch_description():
+    return LaunchDescription([
+        Node(
+            package='my_package',
+            executable='my_node',
+            name='my_node_name',
+            output='screen',
+        ),
+    ])
+```
 <!-- ## Creating a Workspace
 
 1. Create the workspace directory and the `src` folder:
