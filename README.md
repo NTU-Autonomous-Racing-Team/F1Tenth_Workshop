@@ -24,14 +24,14 @@
    ```
 6. Clone this repository
    ```sh
-   git clone https://github.com/ASME-NTU/ROS2_Workshop.git ~/ROS2_Workshop/
+   git clone https://github.com/NTU-Autonomous-Racing-Team/F1Tenth_Workshop.git ~/F1Tenth_Workshop/
    ```
    > If you can't copy paste, right click powershell then navigate to `Properties > Tick "Use Ctrl+Shift+C/V as copy paste`"
 8. Docker Setup
     - Setting up docker container
       
       ```sh
-      cd ~/ROS2_Workshop/install_windows/
+      cd ~/F1Tenth_Workshop/install_windows/
       sudo docker network create f1tenth_net
       sudo docker build -t f1tenth_gym_ros .
       ```
@@ -66,13 +66,13 @@
 2.  Clone this repository
    
      ```sh
-     git clone https://github.com/ASME-NTU/ROS2_Workshop.git ~/ROS2_Workshop/
+     git clone https://github.com/NTU-Autonomous-Racing-Team/F1Tenth_Workshop.git ~/F1Tenth_Workshop/
      ```
 3. Launch Docker
 4. Docker Setup
     - Setting up docker containers
       ```sh
-      cd ~/ROS2_Workshop/install_macos/
+      cd ~/F1Tenth_Workshop/install_macos/
       docker compose -p asme_ros up -d
       ```
     
@@ -88,13 +88,13 @@
 3. Clone this repository
    
     ```sh
-    git clone https://github.com/ASME-NTU/ROS2_Workshop.git ~/ROS2_Workshop/
+    git clone https://github.com/NTU-Autonomous-Racing-Team/F1Tenth_Workshop.git ~/F1Tenth_Workshop/
     ```
     
 5. Docker Setup
     - Setting up docker container      
       ```sh
-      cd ~/ROS2_Workshop/install_linux/
+      cd ~/F1Tenth_Workshop/install_linux/
       sudo docker network create f1tenth_net
       sudo docker build -t f1tenth_gym_ros .
       ```
