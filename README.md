@@ -73,7 +73,7 @@
     - Setting up docker containers
       ```sh
       cd ~/F1Tenth_Workshop/install_macos/
-      docker compose -p asme_ros up -d
+      docker compose -p f1tenth_gym_ros up -d
       ```
     
     - Run this script to start the docker containers
