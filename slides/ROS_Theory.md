@@ -95,8 +95,35 @@ h3 {
 - **Services**
 - **Actions**
 
+
+---
+<style scoped>
+h2 {
+    text-align: center;
+    position: UNSET;
+    color: white;
+}
+</style>
+# Node Communication in ROS2
+
+## Publish-Subscribe Mechanism
+
+- ROS2 uses a **publish-subscribe** (pub-sub) model to enable communication between nodes.
+- Nodes **publish** messages to topics and other nodes **subscribe** to those topics to receive the messages.
+
 ---
 
+# How Pub-Sub Works
+
+1. **Publisher Node**: 
+   - A node that creates and sends data (messages) to a topic.
+   - Example: A sensor node publishing temperature readings.
+
+2. **Subscriber Node**:
+   - A node that listens to a topic and processes the incoming data.
+   - Example: A control node receiving temperature data to adjust a thermostat.
+
+---
 <style>
 img[alt~="center"] {
   display: block;
