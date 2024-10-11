@@ -111,6 +111,6 @@ In your respective terminals run
 ```sh
 source /opt/ros/foxy/setup.bash
 source ./install/local_setup.bash
-ros2 launch f1tenth_gym_ros gym_bridge_ros.py
+ros2 launch f1tenth_gym_ros gym_bridge_launch.py
 ```
 If everything is working, a window should pop up (It might take awhile for the simulation to startup when ran for the first time). For MacOS users click on this link [http://localhost:8080/vnc.html](http://localhost:8080/vnc.html) and click on connect to view the simulation.
