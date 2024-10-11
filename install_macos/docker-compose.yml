@@ -2,10 +2,10 @@
 version: '1'
 services:
   sim:
-    image: asme_ros
+    image: f1tenth_gym_ros
     build: ./
     volumes: 
-      - ../:/jackal_files/github_dir
+      - ../:/f1tenth_workshop
     environment:
       - DISPLAY=novnc:0.0
     networks:
