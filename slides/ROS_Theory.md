@@ -154,9 +154,8 @@ float32 steering_angle
 float32 speed
 ```
 
----
 
-# ROS Workspaces
+<!-- # ROS Workspaces
 
  ### A workspace is a collection of ROS2 packages and nodes for a specific project.
 - It contains important directories:
@@ -196,7 +195,7 @@ It contains:
 - Metadata files like CMakeLists.txt and package.xml
 
 **Makes it easier to share code with others**
-
+ -->
 
 ---
 
