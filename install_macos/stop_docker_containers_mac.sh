@@ -1,2 +1,2 @@
-docker stop asme_ros-sim-1 && \
-docker stop asme_ros-novnc-1
+docker stop f1tenth_gym_ros-sim-1 && \
+docker stop f1tenth_gym_ros-novnc-1
