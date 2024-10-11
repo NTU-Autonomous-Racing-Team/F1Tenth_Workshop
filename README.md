@@ -32,8 +32,8 @@
       
       ```sh
       cd ~/ROS2_Workshop/install_windows/
-      sudo docker network create asme_net
-      sudo docker build -f asme_ros.Dockerfile -t asme_ros .
+      sudo docker network create f1tenth_net
+      sudo docker build -t f1tenth_gym_ros .
       ```
 
     - Run this script to start the docker container
@@ -95,8 +95,8 @@
     - Setting up docker container      
       ```sh
       cd ~/ROS2_Workshop/install_linux/
-      sudo docker network create asme_net
-      sudo docker build -f asme_ros.Dockerfile -t asme_ros .
+      sudo docker network create f1tenth_net
+      sudo docker build -t f1tenth_gym_ros .
       ```
 
     - Run this script to start the docker container

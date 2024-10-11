@@ -1,6 +1,6 @@
 #!/bin/sh
 
-container_name=asme_ros
+container_name=f1tenth_gym_ros
 create_container (){
         docker run --rm -it\
         --name ${container_name} \
@@ -8,10 +8,11 @@ create_container (){
       	--env="DISPLAY"\
       	--env="QT_X11_NO_MITSHM=1" \
       	--volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+	--volume="${XAUTHORITY}:/root/.Xauthority" \
         --privileged \
-        --net=asme_net \
-	      -v $PWD/../:/jackal_files/github_dir \
-        asme_ros
+        --net=f1tenth_net \
+ 	      -v $PWD/../:/f1tenth_workshop/ \
+        f1tenth_gym_ros
 }
 
 rm_container (){
