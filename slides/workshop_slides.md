@@ -28,13 +28,6 @@ marp: true
 
 <!-- tell windows users to launch wsl every time they open a new window -->
 
-## Prequisites
-- Text editor
-- Terminal emulator
-- Github repository open in browser
-
----
-
 <style scoped>
 h2 {
     text-align: center;
@@ -47,8 +40,6 @@ h2 {
 ---
 
 # What's ROS?
-
-
 
 ---
 <style scoped>
