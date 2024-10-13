@@ -230,8 +230,22 @@ ros2 run my_package minimal_pubsub
 
 # ROS2 Launch
 
-1. Initialise a ros2 package `ros2 pkg create my_msgs --dependencies std_msgs geometry_msgs`
-2. Define your launch file [my_bringup](../ros2_ws/src/my_bringup/launch/my_demo.launch.py)
+1. Initialise a ros2 package
+
+```
+ros2 pkg create my_bringup --dependencies ros2launch
+```
+
+2. Define your launch file [my_bringup.py](../ros2_ws/src/my_bringup/launch/my_demo.launch.py)
+3. Add launch file to `setup.py`
+
+```
+import os
+from glob import glob
+...
+(os.path.join('share', package_name, 'launch'), glob(os.path.join('launch', '*launch.[pxy][yma]*')))
+...
+```
 
 ---
 
@@ -310,5 +324,6 @@ ros2 topic echo some_topic
 -   [Creating a Package](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Creating-Your-First-ROS2-Package.html)
 -   [Simple Pusblisher/ Subscriber (Python)](https://docs.ros.org/en/foxy/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.html)
 -   [Create Custom Message](https://roboticsbackend.com/ros2-create-custom-message/#Using_existing_messagesinterfaces)
+-   [Create a Launch File](https://docs.ros.org/en/foxy/Tutorials/Intermediate/Launch/Creating-Launch-Files.html)
 
 ---
