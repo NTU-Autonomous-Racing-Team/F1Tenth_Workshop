@@ -1,0 +1,31 @@
+[0.394s] Invoking command in '/ros2_ws/src/my_package': PYTHONPATH=/ros2_ws/build/my_package/prefix_override:/ros2_ws/install/my_package/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_package build --build-base /ros2_ws/build/my_package/build install --record /ros2_ws/build/my_package/install.log --install-scripts $base/lib/my_package --single-version-externally-managed
+[0.507s] running egg_info
+[0.508s] writing ../../build/my_package/my_package.egg-info/PKG-INFO
+[0.508s] writing dependency_links to ../../build/my_package/my_package.egg-info/dependency_links.txt
+[0.508s] writing entry points to ../../build/my_package/my_package.egg-info/entry_points.txt
+[0.508s] writing requirements to ../../build/my_package/my_package.egg-info/requires.txt
+[0.508s] writing top-level names to ../../build/my_package/my_package.egg-info/top_level.txt
+[0.536s] reading manifest file '../../build/my_package/my_package.egg-info/SOURCES.txt'
+[0.537s] writing manifest file '../../build/my_package/my_package.egg-info/SOURCES.txt'
+[0.537s] running build
+[0.537s] running build_py
+[0.537s] copying my_package/minimal_pubsub.py -> /ros2_ws/build/my_package/build/lib/my_package
+[0.537s] running install
+[0.538s] running install_lib
+[0.539s] copying /ros2_ws/build/my_package/build/lib/my_package/minimal_pubsub.py -> /ros2_ws/install/my_package/lib/python3.8/site-packages/my_package
+[0.539s] byte-compiling /ros2_ws/install/my_package/lib/python3.8/site-packages/my_package/minimal_pubsub.py to minimal_pubsub.cpython-38.pyc
+[0.540s]   File "/ros2_ws/install/my_package/lib/python3.8/site-packages/my_package/minimal_pubsub.py", line 38
+[0.540s]     self.msg_received = String)
+[0.540s]                               ^
+[0.540s] SyntaxError: unmatched ')'
+[0.540s] 
+[0.540s] running install_data
+[0.541s] running install_egg_info
+[0.541s] removing '/ros2_ws/install/my_package/lib/python3.8/site-packages/my_package-0.0.0-py3.8.egg-info' (and everything under it)
+[0.542s] Copying ../../build/my_package/my_package.egg-info to /ros2_ws/install/my_package/lib/python3.8/site-packages/my_package-0.0.0-py3.8.egg-info
+[0.543s] running install_scripts
+[0.556s] Installing minimal_publisher script to /ros2_ws/install/my_package/lib/my_package
+[0.556s] Installing minimal_pubsub script to /ros2_ws/install/my_package/lib/my_package
+[0.556s] Installing minimal_subscriber script to /ros2_ws/install/my_package/lib/my_package
+[0.556s] writing list of installed files to '/ros2_ws/build/my_package/install.log'
+[0.572s] Invoked command in '/ros2_ws/src/my_package' returned '0': PYTHONPATH=/ros2_ws/build/my_package/prefix_override:/ros2_ws/install/my_package/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_package build --build-base /ros2_ws/build/my_package/build install --record /ros2_ws/build/my_package/install.log --install-scripts $base/lib/my_package --single-version-externally-managed

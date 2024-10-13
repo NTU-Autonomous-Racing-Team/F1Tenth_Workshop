@@ -1,0 +1,182 @@
+[0.000000] (-) TimerEvent: {}
+[0.000141] (my_msgs) JobQueued: {'identifier': 'my_msgs', 'dependencies': OrderedDict()}
+[0.000174] (my_package) JobQueued: {'identifier': 'my_package', 'dependencies': OrderedDict()}
+[0.000216] (my_bringup) JobQueued: {'identifier': 'my_bringup', 'dependencies': OrderedDict([('my_package', '/ros2_ws/install/my_package')])}
+[0.000909] (my_package) JobStarted: {'identifier': 'my_package'}
+[0.013967] (my_msgs) JobStarted: {'identifier': 'my_msgs'}
+[0.105616] (-) TimerEvent: {}
+[0.155966] (my_msgs) JobProgress: {'identifier': 'my_msgs', 'progress': 'cmake'}
+[0.156760] (my_msgs) JobProgress: {'identifier': 'my_msgs', 'progress': 'build'}
+[0.157581] (my_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ros2_ws/build/my_msgs', '--', '-j8', '-l8'], 'cwd': '/ros2_ws/build/my_msgs', 'env': OrderedDict([('HOSTNAME', '5914f6ff6f5f'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/install/my_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/ros2_ws/src/my_bringup/launch'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/my_package:/ros2_ws/install/my_msgs:/ros2_ws/install/my_bringup:/opt/ros/foxy'), ('PWD', '/ros2_ws/build/my_msgs'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/ros2_ws/install/my_bringup/lib/python3.8/site-packages:/ros2_ws/install/my_package/lib/python3.8/site-packages:/ros2_ws/install/my_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/my_msgs:/ros2_ws/install/my_bringup:/ros2_ws/install/my_package:/opt/ros/foxy')]), 'shell': False}
+[0.206641] (-) TimerEvent: {}
+[0.213335] (my_msgs) StdoutLine: {'line': b'[  9%] Built target my_msgs__cpp\n'}
+[0.213594] (my_msgs) StdoutLine: {'line': b'[ 12%] Built target my_msgs__rosidl_generator_c\n'}
+[0.234114] (my_msgs) StdoutLine: {'line': b'[ 32%] Built target my_msgs__rosidl_typesupport_introspection_cpp\n'}
+[0.234389] (my_msgs) StdoutLine: {'line': b'[ 32%] Built target my_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[0.235422] (my_msgs) StdoutLine: {'line': b'[ 41%] Built target my_msgs__rosidl_typesupport_introspection_c\n'}
+[0.238276] (my_msgs) StdoutLine: {'line': b'[ 51%] Built target my_msgs__rosidl_typesupport_c\n'}
+[0.238586] (my_msgs) StdoutLine: {'line': b'[ 61%] Built target my_msgs__rosidl_typesupport_cpp\n'}
+[0.254254] (my_msgs) StdoutLine: {'line': b'[ 70%] Built target my_msgs__rosidl_typesupport_fastrtps_c\n'}
+[0.269832] (my_msgs) StdoutLine: {'line': b'[ 70%] Built target my_msgs\n'}
+[0.285010] (my_msgs) StdoutLine: {'line': b'[ 74%] Built target my_msgs__py\n'}
+[0.302723] (my_msgs) StdoutLine: {'line': b'[ 80%] Built target my_msgs__python\n'}
+[0.307779] (-) TimerEvent: {}
+[0.322646] (my_msgs) StdoutLine: {'line': b'[100%] Built target my_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.322990] (my_msgs) StdoutLine: {'line': b'[100%] Built target my_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[0.323233] (my_msgs) StdoutLine: {'line': b'[100%] Built target my_msgs__rosidl_typesupport_c__pyext\n'}
+[0.331488] (my_msgs) CommandEnded: {'returncode': 0}
+[0.367536] (my_msgs) JobProgress: {'identifier': 'my_msgs', 'progress': 'install'}
+[0.374923] (my_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/ros2_ws/build/my_msgs'], 'cwd': '/ros2_ws/build/my_msgs', 'env': OrderedDict([('HOSTNAME', '5914f6ff6f5f'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ros2_ws/install/my_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/ros2_ws/src/my_bringup/launch'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ros2_ws/install'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/ros2_ws/install/my_package:/ros2_ws/install/my_msgs:/ros2_ws/install/my_bringup:/opt/ros/foxy'), ('PWD', '/ros2_ws/build/my_msgs'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/ros2_ws/install/my_bringup/lib/python3.8/site-packages:/ros2_ws/install/my_package/lib/python3.8/site-packages:/ros2_ws/install/my_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros2_ws/install/my_msgs:/ros2_ws/install/my_bringup:/ros2_ws/install/my_package:/opt/ros/foxy')]), 'shell': False}
+[0.383742] (my_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.384119] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/ament_index/resource_index/rosidl_interfaces/my_msgs\n'}
+[0.384335] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs\n'}
+[0.384465] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg\n'}
+[0.384551] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.384595] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg/detail\n'}
+[0.384647] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg/detail/my_message__type_support.h\n'}
+[0.384705] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg/detail/my_message__functions.h\n'}
+[0.384773] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg/detail/my_message__functions.c\n'}
+[0.384824] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg/detail/my_message__struct.h\n'}
+[0.384883] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg/my_message.h\n'}
+[0.385009] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/environment/library_path.sh\n'}
+[0.385055] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/environment/library_path.dsv\n'}
+[0.385096] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/lib/libmy_msgs__rosidl_generator_c.so\n'}
+[0.385210] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs\n'}
+[0.385273] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg\n'}
+[0.385335] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg/detail\n'}
+[0.385384] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg/detail/my_message__rosidl_typesupport_fastrtps_c.h\n'}
+[0.385442] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.385574] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/lib/libmy_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[0.385630] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs\n'}
+[0.385672] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg\n'}
+[0.385729] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg/detail\n'}
+[0.385785] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg/detail/dds_fastrtps\n'}
+[0.385909] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg/detail/my_message__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.385972] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.386032] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/lib/libmy_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.386141] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs\n'}
+[0.386194] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg\n'}
+[0.386235] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg/detail\n'}
+[0.386276] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg/detail/my_message__type_support.c\n'}
+[0.386323] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg/detail/my_message__rosidl_typesupport_introspection_c.h\n'}
+[0.386386] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.386533] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/lib/libmy_msgs__rosidl_typesupport_introspection_c.so\n'}
+[0.386667] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/lib/libmy_msgs__rosidl_typesupport_c.so\n'}
+[0.386774] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs\n'}
+[0.386870] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg\n'}
+[0.386940] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg/detail\n'}
+[0.387126] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg/detail/my_message__type_support.hpp\n'}
+[0.387188] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg/detail/my_message__struct.hpp\n'}
+[0.387256] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg/detail/my_message__traits.hpp\n'}
+[0.387316] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg/detail/my_message__builder.hpp\n'}
+[0.387436] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg/my_message.hpp\n'}
+[0.387505] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[0.387550] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs\n'}
+[0.387656] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg\n'}
+[0.387698] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg/detail\n'}
+[0.387800] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg/detail/my_message__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.387858] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/include/my_msgs/msg/detail/my_message__type_support.cpp\n'}
+[0.387968] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/lib/libmy_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[0.388015] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/lib/libmy_msgs__rosidl_typesupport_cpp.so\n'}
+[0.388056] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/environment/pythonpath.sh\n'}
+[0.388097] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/environment/pythonpath.dsv\n'}
+[0.388138] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/lib/python3.8/site-packages/my_msgs/__init__.py\n'}
+[0.402313] (my_package) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/my_package', 'build', '--build-base', '/ros2_ws/build/my_package/build', 'install', '--record', '/ros2_ws/build/my_package/install.log', '--install-scripts', '$base/lib/my_package', '--single-version-externally-managed'], 'cwd': '/ros2_ws/src/my_package', 'env': {'HOSTNAME': '5914f6ff6f5f', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/ros2_ws/install/my_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/root', 'OLDPWD': '/ros2_ws/src/my_bringup/launch', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/ros2_ws/install', 'ROS_DISTRO': 'foxy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/ros2_ws/install/my_package:/ros2_ws/install/my_msgs:/ros2_ws/install/my_bringup:/opt/ros/foxy', 'PWD': '/ros2_ws/build/my_package', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/ros2_ws/build/my_package/prefix_override:/ros2_ws/install/my_package/lib/python3.8/site-packages:/ros2_ws/install/my_bringup/lib/python3.8/site-packages:/ros2_ws/install/my_package/lib/python3.8/site-packages:/ros2_ws/install/my_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/ros2_ws/install/my_msgs:/ros2_ws/install/my_bringup'}, 'shell': False}
+[0.408619] (-) TimerEvent: {}
+[0.414578] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/lib/python3.8/site-packages/my_msgs/msg\n'}
+[0.414720] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/lib/python3.8/site-packages/my_msgs/msg/__init__.py\n'}
+[0.414771] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/lib/python3.8/site-packages/my_msgs/msg/_my_message_s.c\n'}
+[0.414816] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/lib/python3.8/site-packages/my_msgs/msg/_my_message.py\n'}
+[0.414927] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/lib/python3.8/site-packages/my_msgs/my_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\n'}
+[0.415581] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/lib/python3.8/site-packages/my_msgs/my_msgs_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\n'}
+[0.416196] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/lib/python3.8/site-packages/my_msgs/my_msgs_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\n'}
+[0.416675] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/lib/libmy_msgs__python.so\n'}
+[0.416878] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/msg/MyMessage.idl\n'}
+[0.416959] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/msgs/MyMessage.msg\n'}
+[0.417116] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/ament_index/resource_index/package_run_dependencies/my_msgs\n'}
+[0.417242] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/ament_index/resource_index/parent_prefix_path/my_msgs\n'}
+[0.417362] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/environment/ament_prefix_path.sh\n'}
+[0.417423] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/environment/ament_prefix_path.dsv\n'}
+[0.417523] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/environment/path.sh\n'}
+[0.417582] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/environment/path.dsv\n'}
+[0.417662] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/local_setup.bash\n'}
+[0.417780] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/local_setup.sh\n'}
+[0.417825] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/local_setup.zsh\n'}
+[0.417904] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/local_setup.dsv\n'}
+[0.417960] (my_msgs) StdoutLine: {'line': b'-- Installing: /ros2_ws/install/my_msgs/share/my_msgs/package.dsv\n'}
+[0.418036] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/ament_index/resource_index/packages/my_msgs\n'}
+[0.418160] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/cmake/my_msgs__rosidl_generator_cExport.cmake\n'}
+[0.418279] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/cmake/my_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.418331] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/cmake/my_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.418380] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/cmake/my_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.418526] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/cmake/my_msgs__rosidl_typesupport_cExport.cmake\n'}
+[0.418585] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/cmake/my_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.418735] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/cmake/my_msgs__rosidl_generator_cppExport.cmake\n'}
+[0.418792] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/cmake/my_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.418946] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/cmake/my_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.419042] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/cmake/my_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[0.419088] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/cmake/my_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.419137] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[0.419266] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.419335] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.419386] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.419434] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.419510] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.419641] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.419706] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/cmake/my_msgsConfig.cmake\n'}
+[0.419749] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/cmake/my_msgsConfig-version.cmake\n'}
+[0.419790] (my_msgs) StdoutLine: {'line': b'-- Up-to-date: /ros2_ws/install/my_msgs/share/my_msgs/package.xml\n'}
+[0.422490] (my_msgs) CommandEnded: {'returncode': 0}
+[0.479667] (my_msgs) JobEnded: {'identifier': 'my_msgs', 'rc': 0}
+[0.510519] (-) TimerEvent: {}
+[0.517329] (my_package) StdoutLine: {'line': b'running egg_info\n'}
+[0.517731] (my_package) StdoutLine: {'line': b'writing ../../build/my_package/my_package.egg-info/PKG-INFO\n'}
+[0.517899] (my_package) StdoutLine: {'line': b'writing dependency_links to ../../build/my_package/my_package.egg-info/dependency_links.txt\n'}
+[0.518046] (my_package) StdoutLine: {'line': b'writing entry points to ../../build/my_package/my_package.egg-info/entry_points.txt\n'}
+[0.518230] (my_package) StdoutLine: {'line': b'writing requirements to ../../build/my_package/my_package.egg-info/requires.txt\n'}
+[0.518289] (my_package) StdoutLine: {'line': b'writing top-level names to ../../build/my_package/my_package.egg-info/top_level.txt\n'}
+[0.546081] (my_package) StdoutLine: {'line': b"reading manifest file '../../build/my_package/my_package.egg-info/SOURCES.txt'\n"}
+[0.546744] (my_package) StdoutLine: {'line': b"writing manifest file '../../build/my_package/my_package.egg-info/SOURCES.txt'\n"}
+[0.546876] (my_package) StdoutLine: {'line': b'running build\n'}
+[0.546933] (my_package) StdoutLine: {'line': b'running build_py\n'}
+[0.547112] (my_package) StdoutLine: {'line': b'running install\n'}
+[0.547692] (my_package) StdoutLine: {'line': b'running install_lib\n'}
+[0.548718] (my_package) StdoutLine: {'line': b'running install_data\n'}
+[0.548958] (my_package) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.550109] (my_package) StdoutLine: {'line': b"removing '/ros2_ws/install/my_package/lib/python3.8/site-packages/my_package-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[0.550494] (my_package) StdoutLine: {'line': b'Copying ../../build/my_package/my_package.egg-info to /ros2_ws/install/my_package/lib/python3.8/site-packages/my_package-0.0.0-py3.8.egg-info\n'}
+[0.551317] (my_package) StdoutLine: {'line': b'running install_scripts\n'}
+[0.563917] (my_package) StdoutLine: {'line': b'Installing my_node script to /ros2_ws/install/my_package/lib/my_package\n'}
+[0.564217] (my_package) StdoutLine: {'line': b"writing list of installed files to '/ros2_ws/build/my_package/install.log'\n"}
+[0.579691] (my_package) CommandEnded: {'returncode': 0}
+[0.585961] (my_package) JobEnded: {'identifier': 'my_package', 'rc': 0}
+[0.586403] (my_bringup) JobStarted: {'identifier': 'my_bringup'}
+[0.612587] (-) TimerEvent: {}
+[0.716756] (-) TimerEvent: {}
+[0.822568] (-) TimerEvent: {}
+[0.924633] (-) TimerEvent: {}
+[0.938933] (my_bringup) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/my_bringup', 'build', '--build-base', '/ros2_ws/build/my_bringup/build', 'install', '--record', '/ros2_ws/build/my_bringup/install.log', '--install-scripts', '$base/lib/my_bringup', '--single-version-externally-managed'], 'cwd': '/ros2_ws/src/my_bringup', 'env': {'HOSTNAME': '5914f6ff6f5f', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/ros2_ws/install/my_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/root', 'OLDPWD': '/ros2_ws/src/my_bringup/launch', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/ros2_ws/install', 'ROS_DISTRO': 'foxy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/ros2_ws/install/my_package:/ros2_ws/install/my_msgs:/ros2_ws/install/my_bringup:/opt/ros/foxy', 'PWD': '/ros2_ws/build/my_bringup', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/ros2_ws/build/my_bringup/prefix_override:/ros2_ws/install/my_bringup/lib/python3.8/site-packages:/ros2_ws/install/my_package/lib/python3.8/site-packages:/ros2_ws/install/my_bringup/lib/python3.8/site-packages:/ros2_ws/install/my_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/ros2_ws/install/my_msgs:/ros2_ws/install/my_bringup'}, 'shell': False}
+[1.026770] (-) TimerEvent: {}
+[1.053253] (my_bringup) StdoutLine: {'line': b'running egg_info\n'}
+[1.053557] (my_bringup) StdoutLine: {'line': b'writing ../../build/my_bringup/my_bringup.egg-info/PKG-INFO\n'}
+[1.053775] (my_bringup) StdoutLine: {'line': b'writing dependency_links to ../../build/my_bringup/my_bringup.egg-info/dependency_links.txt\n'}
+[1.053940] (my_bringup) StdoutLine: {'line': b'writing entry points to ../../build/my_bringup/my_bringup.egg-info/entry_points.txt\n'}
+[1.054005] (my_bringup) StdoutLine: {'line': b'writing requirements to ../../build/my_bringup/my_bringup.egg-info/requires.txt\n'}
+[1.054047] (my_bringup) StdoutLine: {'line': b'writing top-level names to ../../build/my_bringup/my_bringup.egg-info/top_level.txt\n'}
+[1.081553] (my_bringup) StdoutLine: {'line': b"reading manifest file '../../build/my_bringup/my_bringup.egg-info/SOURCES.txt'\n"}
+[1.082172] (my_bringup) StdoutLine: {'line': b"writing manifest file '../../build/my_bringup/my_bringup.egg-info/SOURCES.txt'\n"}
+[1.082295] (my_bringup) StdoutLine: {'line': b'running build\n'}
+[1.082341] (my_bringup) StdoutLine: {'line': b'running build_py\n'}
+[1.082498] (my_bringup) StdoutLine: {'line': b'running install\n'}
+[1.082970] (my_bringup) StdoutLine: {'line': b'running install_lib\n'}
+[1.083871] (my_bringup) StdoutLine: {'line': b'running install_data\n'}
+[1.084152] (my_bringup) StdoutLine: {'line': b'creating /ros2_ws/install/my_bringup/share/my_bringup/launch\n'}
+[1.084292] (my_bringup) StdoutLine: {'line': b'copying launch/my_demo_launch.py -> /ros2_ws/install/my_bringup/share/my_bringup/launch\n'}
+[1.084427] (my_bringup) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.085528] (my_bringup) StdoutLine: {'line': b"removing '/ros2_ws/install/my_bringup/lib/python3.8/site-packages/my_bringup-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[1.085886] (my_bringup) StdoutLine: {'line': b'Copying ../../build/my_bringup/my_bringup.egg-info to /ros2_ws/install/my_bringup/lib/python3.8/site-packages/my_bringup-0.0.0-py3.8.egg-info\n'}
+[1.086586] (my_bringup) StdoutLine: {'line': b'running install_scripts\n'}
+[1.099039] (my_bringup) StdoutLine: {'line': b"writing list of installed files to '/ros2_ws/build/my_bringup/install.log'\n"}
+[1.114608] (my_bringup) CommandEnded: {'returncode': 0}
+[1.120253] (my_bringup) JobEnded: {'identifier': 'my_bringup', 'rc': 0}
+[1.120868] (-) EventReactorShutdown: {}

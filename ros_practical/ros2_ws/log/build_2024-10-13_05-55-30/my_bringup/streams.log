@@ -1,0 +1,20 @@
+[0.357s] Invoking command in '/ros2_ws/src/my_bringup': PYTHONPATH=/ros2_ws/build/my_bringup/prefix_override:/ros2_ws/install/my_bringup/lib/python3.8/site-packages:/ros2_ws/install/my_package/lib/python3.8/site-packages:/ros2_ws/install/my_bringup/lib/python3.8/site-packages:/ros2_ws/install/my_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_bringup build --build-base /ros2_ws/build/my_bringup/build install --record /ros2_ws/build/my_bringup/install.log --install-scripts $base/lib/my_bringup --single-version-externally-managed
+[0.469s] running egg_info
+[0.470s] writing ../../build/my_bringup/my_bringup.egg-info/PKG-INFO
+[0.470s] writing dependency_links to ../../build/my_bringup/my_bringup.egg-info/dependency_links.txt
+[0.470s] writing entry points to ../../build/my_bringup/my_bringup.egg-info/entry_points.txt
+[0.470s] writing requirements to ../../build/my_bringup/my_bringup.egg-info/requires.txt
+[0.470s] writing top-level names to ../../build/my_bringup/my_bringup.egg-info/top_level.txt
+[0.497s] reading manifest file '../../build/my_bringup/my_bringup.egg-info/SOURCES.txt'
+[0.498s] writing manifest file '../../build/my_bringup/my_bringup.egg-info/SOURCES.txt'
+[0.498s] running build
+[0.498s] running build_py
+[0.498s] running install
+[0.499s] running install_lib
+[0.499s] running install_data
+[0.500s] running install_egg_info
+[0.501s] removing '/ros2_ws/install/my_bringup/lib/python3.8/site-packages/my_bringup-0.0.0-py3.8.egg-info' (and everything under it)
+[0.501s] Copying ../../build/my_bringup/my_bringup.egg-info to /ros2_ws/install/my_bringup/lib/python3.8/site-packages/my_bringup-0.0.0-py3.8.egg-info
+[0.502s] running install_scripts
+[0.515s] writing list of installed files to '/ros2_ws/build/my_bringup/install.log'
+[0.530s] Invoked command in '/ros2_ws/src/my_bringup' returned '0': PYTHONPATH=/ros2_ws/build/my_bringup/prefix_override:/ros2_ws/install/my_bringup/lib/python3.8/site-packages:/ros2_ws/install/my_package/lib/python3.8/site-packages:/ros2_ws/install/my_bringup/lib/python3.8/site-packages:/ros2_ws/install/my_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/my_bringup build --build-base /ros2_ws/build/my_bringup/build install --record /ros2_ws/build/my_bringup/install.log --install-scripts $base/lib/my_bringup --single-version-externally-managed

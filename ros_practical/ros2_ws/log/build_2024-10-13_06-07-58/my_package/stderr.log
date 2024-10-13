@@ -1,0 +1,5 @@
+  File "/ros2_ws/install/my_package/lib/python3.8/site-packages/my_package/minimal_pubsub.py", line 38
+    self.msg_received = String)
+                              ^
+SyntaxError: unmatched ')'
+

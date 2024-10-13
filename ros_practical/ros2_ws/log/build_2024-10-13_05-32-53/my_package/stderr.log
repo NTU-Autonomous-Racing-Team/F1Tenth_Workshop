@@ -1,0 +1,10 @@
+  File "/ros2_ws/install/my_package/lib/python3.8/site-packages/my_package/minimal_pubsub.py", line 27
+    published_topic = <topic_name>
+                      ^
+SyntaxError: invalid syntax
+
+  File "/ros2_ws/install/my_package/lib/python3.8/site-packages/my_package/minimal_publisher.py", line 14
+    timer_period = <period>  # seconds
+                   ^
+SyntaxError: invalid syntax
+

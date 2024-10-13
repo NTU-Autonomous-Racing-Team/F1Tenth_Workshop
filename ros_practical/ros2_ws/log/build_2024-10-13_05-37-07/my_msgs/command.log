@@ -1,0 +1,4 @@
+Invoking command in '/ros2_ws/build/my_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /ros2_ws/build/my_msgs -- -j8 -l8
+Invoked command in '/ros2_ws/build/my_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /ros2_ws/build/my_msgs -- -j8 -l8
+Invoking command in '/ros2_ws/build/my_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /ros2_ws/build/my_msgs
+Invoked command in '/ros2_ws/build/my_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /ros2_ws/build/my_msgs
