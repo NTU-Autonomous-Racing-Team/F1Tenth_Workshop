@@ -35,17 +35,17 @@ marp: true
 
 # Contents
 
-1. [ROS2 and the Terminal](#1-ros2-and-the-terminal)
-2. [ROS2 Workspaces](#2-ros2-workspaces)
-3. [ROS2 Packages](#3-ros-packages)
-4. [Publishing](#4-publisher)
-5. [Subscribing](#5-subscriber)
-6. [Additional](#6-additional)
+1. [ROS2 Debugging on Terminal](#1-ros2-debugging-on-terminal)
+2. [Creating ROS2 Workspaces](#2-creating-ros2-workspaces)
+3. [Creating ROS2 Packages](#3-creating-ros-packages)
+4. [Publishing](#4-minimal-publisher)
+5. [Subscribing](#5-minimal-subscriber)
+6. [Extra](#6-extra)
 7. [References](#7-references)
 
 ---
 
-# 1. ROS2 and the Terminal
+# 1. ROS2 Debugging on Terminal
 
 -   Useful for quick debugging and sanity checks
 -   Viewing Topics
@@ -57,41 +57,63 @@ marp: true
 
 ---
 
-# 2. ROS2 Workspaces
+# 2. Creating ROS2 Workspaces
+
+1. Make a directory for a ros2 workspace
 
 ```
-mkdir -p /ros2_ws/src # Make a directory for a ros2 workspace
-
-cd /ros2_ws # Change directory to the ros2 workspace
-
-colcon build # Build your workspace
+mkdir -p /ros2_ws/src
 ```
 
----
-
-# 3. ROS Packages
+2. Change directory to the ros2 workspace
 
 ```
-cd ~/ros2_ws/src #Change directory to the source folder
-
-ros2 pkg create my_package --build-type ament_python --node-name my_node --dependencies rclpy # Create a ROS package
-
+cd /ros2_ws
 ```
 
----
-
-# 3. ROS Packages cont.
-
--   Facilitating the workshop
+3. Build your workspace
 
 ```
-rm -rf /ros2_ws/src #deleting the source folder
-cp /f1tenth_workshop/ros2_ws/src /ros2_ws #copy the source folder we made
+colcon build
 ```
 
 ---
 
-# 4. Publisher
+# 3. Creating ROS Packages
+
+1. Change directory to the source folder
+
+```
+cd ~/ros2_ws/src
+```
+
+2. Create a ROS package
+
+```
+ros2 pkg create my_package --build-type ament_python --node-name my_node --dependencies rclpy
+```
+
+---
+
+# 3. Creating ROS Package (for workshop)
+
+-   To facilitate the workshop, all scripts and packages have already been made
+
+1. Deleted the package created
+
+```
+rm -rf /ros2_ws/src/my_package
+```
+
+2. Copying the pre-made package
+
+```
+cp /f1tenth_workshop/ros2_ws/src/my_package /ros2_ws/src
+```
+
+---
+
+# 4. Minimal Publisher
 
 1. Writing your first publisher script
 
@@ -99,7 +121,7 @@ cp /f1tenth_workshop/ros2_ws/src /ros2_ws #copy the source folder we made
 
 ---
 
-# 4. Publisher cont.
+# 4. Minimal Publisher cont.
 
 2. Adding your script as an executable. Open `setup.py`
 
@@ -115,7 +137,7 @@ entry_points = {
 
 ---
 
-# 4. Publisher cont.
+# 4. Minimal Publisher cont.
 
 3. Build your package
 
@@ -127,14 +149,14 @@ colcon build --packages-select my_package
 
 ```
 # Sourcing the Overlay
-source ~/ros2_ws/install/local_setup.bash
+source /ros2_ws/install/local_setup.bash
 # Starting the Node
 ros2 run my_package minimal_publisher
 ```
 
 ---
 
-# 5. Subscriber
+# 5. Minimal Subscriber
 
 1. Writing your first subscriber script
 
@@ -158,7 +180,7 @@ entry_points = {
 
 ---
 
-# 5. Subscriber cont.
+# 5. Minimal Subscriber cont.
 
 3. Build your package
 
@@ -179,7 +201,7 @@ ros2 run my_package minimal_publisher
 
 ---
 
-# 6. Additional
+# 6. Extra
 
 -   [Additional Info](#additional-info)
 -   [ROS2 Launch](#ros2-launch)
@@ -208,7 +230,8 @@ ros2 run my_package minimal_pubsub
 
 # ROS2 Launch
 
--   [my_bringup](../ros2_practical/ros2_ws/src/my_bringup/my_demo.launch.py)
+1. Initialise a ros2 package `ros2 pkg create my_msgs --dependencies std_msgs geometry_msgs`
+2. Define your launch file [my_bringup](../ros2_ws/src/my_bringup/launch/my_demo.launch.py)
 
 ---
 
