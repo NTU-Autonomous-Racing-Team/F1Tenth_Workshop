@@ -7,14 +7,16 @@ from std_msgs.msg import String
 class MinimalSubscriber(Node):
 
     def __init__(self):
+        # Initialize the Node object with the name 'minimal_subscriber
         super().__init__("minimal_subscriber")
-        # TODO: replace '<topic_name>' with desired topic name
+        # Create a subscription object with String message type, subscribing to 'my_topic' topic, and calls listener_callback function
         self.subscription = self.create_subscription(
-            String, "<topic_name>", self.listener_callback, 10
+            String, "my_topic", self.listener_callback, 10
         )
         self.subscription  # prevent unused variable warning
 
     def listener_callback(self, msg):
+        # Log the message being received
         self.get_logger().info('I heard: "%s"' % msg.data)
 
 
