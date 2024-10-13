@@ -1,5 +1,0 @@
-[console_scripts]
-minimal_publisher = my_package.minimal_publisher:main
-minimal_pubsub = my_package.minimal_pubsub:main
-minimal_subscriber = my_package.minimal_subscriber:main
-
