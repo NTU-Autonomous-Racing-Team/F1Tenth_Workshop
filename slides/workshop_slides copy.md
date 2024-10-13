@@ -117,7 +117,9 @@ h1 {
     - It includes the application code, runtime, system tools, libraries, and settings.
 
 
+---
 
+![width:450px center](Docker_origin_meme.webp)
 
 ---
 
@@ -134,7 +136,6 @@ Simplified deployment.
 Resource efficiency. -->
 
 ---
-# Docker Engine vs. Virtual Machines ??
 # Docker for robotics ??
 
 <!-- 
@@ -154,9 +155,6 @@ Testing algorithms in isolated environments. -->
 ![width:1000px center](docker_file.png)
 
 
-<!-- 
-dockerfile
- -->
 ---
 
 - **Dockerfile**
@@ -171,6 +169,10 @@ dockerfile
 - **Docker Container**
   - A running instance of a Docker image.
   - Isolated and has its own filesystem, network, and process space.
+
+---
+
+# Acessing your container through VS code
 
 ---
 <style scoped>
@@ -325,3 +327,20 @@ a {
 [100+ Docker Concepts you Need to Know (youtube.com)](https://www.youtube.com/watch?v=rIrNIzy6U_g)
 - CLI Cheat Sheet
 [docker_cheatsheet.pdf](https://docs.docker.com/get-started/docker_cheatsheet.pdf)
+
+---
+
+![width:1000px center](docker_vscode1.webp)
+
+---
+
+
+![width:370px center](docker_vscode2.png)
+
+---
+
+![width:300px center](docker_vscode3.png)
+
+---
+
+![width:450px center](docker_vscode4.png)
