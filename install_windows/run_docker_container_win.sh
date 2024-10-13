@@ -8,7 +8,6 @@ create_container (){
       	--env="DISPLAY"\
       	--env="QT_X11_NO_MITSHM=1" \
       	--volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
-	--volume="${XAUTHORITY}:/root/.Xauthority" \
         --privileged \
         --net=f1tenth_net \
  	      -v $PWD/../:/f1tenth_workshop/ \
