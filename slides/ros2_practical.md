@@ -84,7 +84,7 @@ colcon build
 1. Change directory to the source folder
 
 ```
-cd ~/ros2_ws/src
+cd /ros2_ws/src
 ```
 
 2. Create a ROS package
@@ -194,7 +194,7 @@ colcon build --packages-select my_package
 
 ```
 # Sourcing the Overlay
-source ~/ros2_ws/install/local_setup.bash
+source /ros2_ws/install/local_setup.bash
 # Starting the Node
 ros2 run my_package minimal_publisher
 ```
@@ -288,7 +288,7 @@ ament_export_dependencies(rosidl_default_runtime)
 4. Create your message file:
 
 ```
-cd ~/ros2_ws/src/
+cd /ros2_ws/src/
 mkdir msgs
 cd msgs
 touch my_msg.msg
@@ -311,7 +311,7 @@ touch my_msg.msg
 
 ```
 colcon build --packages-select my_msgs
-source ~/ros2_ws/install/local_setup.bash
+source /ros2_ws/install/local_setup.bash
 ros2 topic pub -r 1 some_topic my_msgs/my_msg "{name: "Lawrence", some_integer: 10, some_vector: [1, 2]}"
 ros2 topic echo some_topic
 ```
