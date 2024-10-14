@@ -7,21 +7,25 @@ from std_msgs.msg import String
 class MinimalPublisher(Node):
 
     def __init__(self):
+        # Initialize the Node object with the name 'minimal_publisher'
         super().__init__('minimal_publisher')
-        # TODO: Replace <topic_name> with desired topic name
-        self.publisher_ = self.create_publisher(String, '<topic_name>', 10)
-        # TODO: Replace <period> with desired timer period in seconds
-        timer_period = <period>  # seconds
-        self.timer = self.create_timer(timer_period, self.timer_callback)
+        # Create a publisher object with String message type, publishing to 'my_topic' topic
+        self.publisher_ = self.create_publisher(String, 'my_topic', 10)
+        # Create a timer object with timer_period seconds and timer_callback function
+        self.timer = self.create_timer(1, self.timer_callback)
+        # Initialize a counter variable
         self.i = 0
 
     def timer_callback(self):
+        # Initialize a String message object
         msg = String()
-        # TODO: Replace <custom_msg> with desired message or uncomment the line below
-        # msg.data = 'Hello World: %d' % self.i
-        msg.data = '<custom_msg> %d' % self.i
+        # Populate the message object with data
+        msg.data = f"Publishing message {self.i}"
+        # Publish the message object
         self.publisher_.publish(msg)
+        # Log the message being published
         self.get_logger().info('Publishing: "%s"' % msg.data)
+        # Increment the counter
         self.i += 1
 
 
