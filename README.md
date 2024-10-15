@@ -5,7 +5,7 @@
 ## Windows
 
 1. [Install docker](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe)
-3. Install WSL by launching Windows Powershell as **administrator** and running the following command
+3. **After docker is installed**, install WSL by launching Windows Powershell as **administrator** and running the following command
    
     ```powershell
     wsl --install
@@ -14,7 +14,7 @@
 4. Enable Ubuntu in Docker Desktop settings
     - Navigate to settings in Docker Desktop
     - Under Resources > WSL integration
-    - Enable the Ubuntu option
+    - Enable the Ubuntu option then click "Apply and Restart"
   
 5. After it's done installing run the following commands to start WSL
 
@@ -38,7 +38,7 @@
 
     - Run this script to start the docker container
       ```sh
-      ./run_docker_container_win.sh
+      sudo ./run_docker_container_win.sh
       ```
       
 ## MacOS
@@ -78,7 +78,7 @@
     
     - Run this script to start the docker containers
       ```sh
-      ./run_docker_containers_mac.sh
+      sudo ./run_docker_containers_mac.sh
       ```
       
 ## Ubuntu Linux
@@ -101,7 +101,7 @@
 
     - Run this script to start the docker container
       ```sh
-      ./run_docker_container.sh
+      sudo ./run_docker_container.sh
       ```
 
 # Running the simulator
