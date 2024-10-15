@@ -54,6 +54,8 @@ marp: true
     `ros2 topic pub -r 1 /topic_name std_msgs/String "data: Hello World!"`
 -   Viewing messages of a topic
     `ros2 topic echo /topic_name`
+-   Checking publish 
+    `ros2 topic hz /topic_name`
 
 ---
 
