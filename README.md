@@ -80,6 +80,7 @@
       ```sh
       sudo ./run_docker_containers_mac.sh
       ```
+    > To stop the docker containers run `sudo ./stop_docker_containers_mac.sh`
       
 ## Ubuntu Linux
 
