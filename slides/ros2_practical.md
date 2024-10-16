@@ -44,6 +44,19 @@ marp: true
 7. [References](#7-references)
 
 ---
+# Open the Container
+- Windows/ Linux
+```
+cd ~/F1Tenth_Workshop/install_linux
+sudo ./run_docker_container.sh
+```
+- Mac
+```
+cd ~/F1Tenth_Workshop/install_macos
+sudo ./run_docker_containers_mac.sh
+```
+
+---
 
 # 1. ROS2 Debugging on Terminal
 
