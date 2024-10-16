@@ -108,7 +108,7 @@ rm -rf /ros2_ws/src/my_package
 2. Copying the pre-made package
 
 ```
-cp /f1tenth_workshop/ros2_ws/src/my_package /ros2_ws/src
+cp -r /f1tenth_workshop/ros2_ws/src/my_package /ros2_ws/src
 ```
 
 ---
@@ -196,7 +196,8 @@ colcon build --packages-select my_package
 # Sourcing the Overlay
 source /ros2_ws/install/local_setup.bash
 # Starting the Node
-ros2 run my_package minimal_publisher
+ros2 run my_package minimal_subscriber
+ros2 topic pub -r 10 my_topic std_msgs/String "data: Hello minimal_subscriber!"
 ```
 
 ---
@@ -224,7 +225,7 @@ ros2 run my_package minimal_pubsub
 
 ```
 
--   Developing ROS2 packages in C++ `ros2 pkg create cpp_package --build-type ament_cmake
+-   Developing ROS2 packages in C++ `ros2 pkg create cpp_package --build-type ament_cmake`
 
 ---
 
