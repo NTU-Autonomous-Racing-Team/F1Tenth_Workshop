@@ -51,5 +51,4 @@ RUN source /opt/ros/foxy/setup.bash && \
     rosdep install -i --from-path src --rosdistro foxy -y && \
     colcon build
 
-WORKDIR '/sim_ws'
 ENTRYPOINT ["/bin/bash"]
