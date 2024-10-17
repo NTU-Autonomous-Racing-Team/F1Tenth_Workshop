@@ -70,13 +70,7 @@ h1 {
 #
 #
 - gives you the ability to run a program on any given machine with docker without dependency issues and conflicts
-`* additional usecase - scale apps over multiple server`
-<!-- Benefits of Docker
-
-Consistency across environments.
-Simplified deployment.
-Resource efficiency. -->
-
+`* additional usecase - scale apps over multiple servers`
 
 ---
 
@@ -101,7 +95,7 @@ Resource efficiency. -->
 - **Docker Container**
   - A running instance of a Docker image.
   - Isolated and has its own filesystem, network, and process space.
-<!-- add in the explanation with the analogy -->
+
 ---
 
 <style scoped>
@@ -123,7 +117,7 @@ h2 {
     - Example: `docker run -it --rm f1tenth_gym_ros`
   - `docker ps`: List running containers.
   - `docker exec`: Run commands in a running container.
-    - Example: `docker exec -it [container_id] bash`
+    - Example: `docker exec -it [container_id/name] bash`
 
 ---
 
@@ -137,7 +131,7 @@ img[alt~="center"] {
 
 # Why *TERMINAL?*
 ![width:450px center](rm_rf_bslash.jpg)
-\* this is basically the `Avada Kedavra` of TERMINAL world, dont ever uses this
+\* this is basically the `Avada Kedavra` of TERMINAL world, dont ever use this
 
 <!-- account for differences between different os -->
 
@@ -169,18 +163,40 @@ h2 {
 ## File Management
 
   - `mkdir`: Create new folder.
-  `mkdir test_folder`
+  `mkdir folder1`
   - `touch`: Create new empty files.
+  `touch file1.txt`  
+  `touch file2.txt` 
   - `cp`: Copy files or directories.
+`cp file1.txt [to_path]` 
+`cp -r folder1 [to_path]` 
+
+
+---
+
+## File Management
+
   - `mv`: Move or rename files or directories.
+  `mv file2.txt file3.txt`
+  `mv file1.txt [to_path]`
+  `mv folder1 [to_path]`
   - `rm`: Remove files or directories (use with caution). (rm -rf)
+`rm file3.txt`                
+`rm -r folder1`               
+`rm -rf [path_to_folder]`      
+
+<!-- Deletes file1.txt
+Recursively deletes folder1 and all its contents
+Forcefully deletes a folder and all its contents without prompting (use with caution) -->
 
 ---
 
 ## Viewing and Editing Files
 
   - `cat`: Display file contents.
+  `cat file1.txt`
   - `nano` or `vim`: Basic text editors within the terminal.
+  `nano file1.txt`
 
 ---
 
@@ -189,6 +205,8 @@ h2 {
   - **Tab Completion**: Quickly complete commands or file names.
   - **Command History**: Use the up/down arrow keys to navigate through previous commands.
   - **Wildcards**: Utilize `*` and `?` for pattern matching.
+  `ls *.txt` Lists all files in the current directory that end with .txt
+  `ls file?.txt` Lists files that match the pattern file?.txt, ie:file1.txt
 
 ---
 
@@ -200,22 +218,6 @@ h2 {
  
 # Acessing your container through VS code
 
-
----
-
-<style scoped>
-a {
-    text-align: center;
-    display: block;
-    font-size: .8;
-    text-decoration: none;
-    margin: 1 auto;
-}
-</style>
-- Explains key concepts (fast!)
-[100+ Docker Concepts you Need to Know (youtube.com)](https://www.youtube.com/watch?v=rIrNIzy6U_g)
-- CLI Cheat Sheet
-[docker_cheatsheet.pdf](https://docs.docker.com/get-started/docker_cheatsheet.pdf)
 
 ---
 
@@ -233,3 +235,19 @@ a {
 ---
 
 ![width:450px center](docker_vscode4.png)
+
+---
+
+<style scoped>
+a {
+    text-align: center;
+    display: block;
+    font-size: .8;
+    text-decoration: none;
+    margin: 1 auto;
+}
+</style>
+- Explains key concepts (fast!)
+[100+ Docker Concepts you Need to Know (youtube.com)](https://www.youtube.com/watch?v=rIrNIzy6U_g)
+- CLI Cheat Sheet
+[docker_cheatsheet.pdf](https://docs.docker.com/get-started/docker_cheatsheet.pdf)
