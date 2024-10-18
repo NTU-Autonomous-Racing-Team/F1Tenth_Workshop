@@ -48,7 +48,7 @@ h1 {
 }
 </style>
 
-![width:300px center](Docker.png)
+![width:300px center](../assets/Docker.png)
 
 
 <!-- Explain containerization and how it differs from virtualization. -->
@@ -61,7 +61,7 @@ h1 {
 
 ---
 
-![width:450px center](Docker_origin_meme.webp)
+![width:450px center](../assets/Docker_origin_meme.webp)
 
 ---
 
@@ -78,7 +78,7 @@ h1 {
 #
 
 
-![width:1000px center](docker_file.png)
+![width:1000px center](../assets/docker_file.png)
 
 
 ---
@@ -130,7 +130,7 @@ img[alt~="center"] {
 </style>
 
 # Why *TERMINAL?*
-![width:450px center](rm_rf_bslash.jpg)
+![width:450px center](../assets/rm_rf_bslash.jpg)
 \* this is basically the `Avada Kedavra` of TERMINAL world, dont ever use this
 
 <!-- account for differences between different os -->
@@ -210,7 +210,7 @@ Forcefully deletes a folder and all its contents without prompting (use with cau
 
 ---
 
-![width:500px center](terminal_meme.webp)
+![width:500px center](../assets/terminal_meme.webp)
 
 ---
 
@@ -221,20 +221,20 @@ Forcefully deletes a folder and all its contents without prompting (use with cau
 
 ---
 
-![width:1000px center](docker_vscode1.webp)
+![width:1000px center](../assets/docker_vscode1.webp)
 
 ---
 
 
-![width:370px center](docker_vscode2.png)
+![width:370px center](../assets/docker_vscode2.png)
 
 ---
 
-![width:300px center](docker_vscode3.png)
+![width:300px center](../assets/docker_vscode3.png)
 
 ---
 
-![width:450px center](docker_vscode4.png)
+![width:450px center](../assets/docker_vscode4.png)
 
 ---
 
