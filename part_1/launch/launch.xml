@@ -1,4 +1,0 @@
-<launch>
-  <node pkg="pub_sub" exec="minimal_publisher"/>
-  <node pkg="pub_sub" exec="minimal_subscriber"/>
-</launch>

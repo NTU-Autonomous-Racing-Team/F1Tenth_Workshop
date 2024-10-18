@@ -5,7 +5,7 @@
 ## Windows
 
 1. [Install docker](https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe)
-3. Install WSL by launching Windows Powershell as **administrator** and running the following command
+3. **After docker is installed**, install WSL by launching Windows Powershell as **administrator** and running the following command
    
     ```powershell
     wsl --install
@@ -14,7 +14,7 @@
 4. Enable Ubuntu in Docker Desktop settings
     - Navigate to settings in Docker Desktop
     - Under Resources > WSL integration
-    - Enable the Ubuntu option
+    - Enable the Ubuntu option then click "Apply and Restart"
   
 5. After it's done installing run the following commands to start WSL
 
@@ -24,21 +24,21 @@
    ```
 6. Clone this repository
    ```sh
-   git clone https://github.com/ASME-NTU/ROS2_Workshop.git ~/ROS2_Workshop/
+   git clone https://github.com/NTU-Autonomous-Racing-Team/F1Tenth_Workshop.git ~/F1Tenth_Workshop/
    ```
    > If you can't copy paste, right click powershell then navigate to `Properties > Tick "Use Ctrl+Shift+C/V as copy paste`"
 8. Docker Setup
     - Setting up docker container
       
       ```sh
-      cd ~/ROS2_Workshop/install_windows/
-      sudo docker network create asme_net
-      sudo docker build -f asme_ros.Dockerfile -t asme_ros .
+      cd ~/F1Tenth_Workshop/install_windows/
+      sudo docker network create f1tenth_net
+      sudo docker build -t f1tenth_gym_ros .
       ```
 
     - Run this script to start the docker container
       ```sh
-      ./run_docker_container_win.sh
+      sudo ./run_docker_container_win.sh
       ```
       
 ## MacOS
@@ -66,20 +66,21 @@
 2.  Clone this repository
    
      ```sh
-     git clone https://github.com/ASME-NTU/ROS2_Workshop.git ~/ROS2_Workshop/
+     git clone https://github.com/NTU-Autonomous-Racing-Team/F1Tenth_Workshop.git ~/F1Tenth_Workshop/
      ```
 3. Launch Docker
 4. Docker Setup
     - Setting up docker containers
       ```sh
-      cd ~/ROS2_Workshop/install_macos/
-      docker compose -p asme_ros up -d
+      cd ~/F1Tenth_Workshop/install_macos/
+      docker compose -p f1tenth_gym_ros up -d
       ```
     
     - Run this script to start the docker containers
       ```sh
-      ./run_docker_containers_mac.sh
+      sudo ./run_docker_containers_mac.sh
       ```
+    > To stop the docker containers run `sudo ./stop_docker_containers_mac.sh`
       
 ## Ubuntu Linux
 
@@ -88,29 +89,29 @@
 3. Clone this repository
    
     ```sh
-    git clone https://github.com/ASME-NTU/ROS2_Workshop.git ~/ROS2_Workshop/
+    git clone https://github.com/NTU-Autonomous-Racing-Team/F1Tenth_Workshop.git ~/F1Tenth_Workshop/
     ```
     
 5. Docker Setup
     - Setting up docker container      
       ```sh
-      cd ~/ROS2_Workshop/install_linux/
-      sudo docker network create asme_net
-      sudo docker build -f asme_ros.Dockerfile -t asme_ros .
+      cd ~/F1Tenth_Workshop/install_linux/
+      sudo docker network create f1tenth_net
+      sudo docker build -t f1tenth_gym_ros .
       ```
 
     - Run this script to start the docker container
       ```sh
-      ./run_docker_container.sh
+      sudo ./run_docker_container.sh
       ```
 
 # Running the simulator
 
-In your respective terminals run (Windows users need to make sure they're in WSL)
+In your respective terminals run 
+> Windows users need to make sure they're in WSL
 ```sh
-cd jackal_ws/
 source /opt/ros/foxy/setup.bash
 source ./install/local_setup.bash
-ros2 launch jackal_gazebo jackal_world.launch.py
+ros2 launch f1tenth_gym_ros gym_bridge_launch.py
 ```
 If everything is working, a window should pop up (It might take awhile for the simulation to startup when ran for the first time). For MacOS users click on this link [http://localhost:8080/vnc.html](http://localhost:8080/vnc.html) and click on connect to view the simulation.
