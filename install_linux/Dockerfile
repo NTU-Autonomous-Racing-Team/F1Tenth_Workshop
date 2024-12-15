@@ -44,6 +44,8 @@ RUN cd f1tenth_gym && \
 # ros2 gym bridge
 RUN mkdir -p sim_ws/src/f1tenth_gym_ros
 RUN git clone https://github.com/f1tenth/f1tenth_gym_ros.git /sim_ws/src/f1tenth_gym_ros
+RUN git clone https://github.com/f1tenth/f1tenth_racetracks.git /sim_ws/src/f1tenth_gym_ros/maps/f1tenth_racetracks
+RUN sed -i "45s|.*|    map_path: '/sim_ws/src/f1tenth_gym_ros/maps/f1tenth_racetracks/BrandsHatch/BrandsHatch_map'|" /sim_ws/src/f1tenth_gym_ros/config/sim.yaml
 # COPY . /sim_ws/src/f1tenth_gym_ros
 RUN source /opt/ros/foxy/setup.bash && \
     cd sim_ws/ && \
